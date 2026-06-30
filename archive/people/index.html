@@ -1,0 +1,16 @@
+<div class="gallery" id="gallery"></div>
+
+<script src="/js/photos.js"></script>
+<script>
+const gallery = document.getElementById("gallery");
+
+photos
+    .filter(photo => photo.category === "people")
+    .forEach(photo => {
+        const img = document.createElement("img");
+        img.src = "/images/" + photo.file;
+        img.alt = photo.title;
+        img.className = "thumbnail";
+        gallery.appendChild(img);
+    });
+</script>
