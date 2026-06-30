@@ -9,18 +9,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="dropdown-content">
 
-                <div class="menu-label">photographs</div>
+                <div class="submenu">
+                    <a href="/archive/" class="submenu-title">photographs</a>
 
-                <a href="/archive/">all photographs</a>
-                <a href="/archive/people/">people</a>
-                <a href="/archive/places/">places</a>
-                <a href="/archive/animals/">animals</a>
-                <a href="/archive/interiors/">interiors</a>
-                <a href="/archive/objects/">objects</a>
+                    <div class="submenu-content">
+                        <a href="/archive/">all photographs</a>
+                        <a href="/archive/people/">people</a>
+                        <a href="/archive/places/">places</a>
+                        <a href="/archive/animals/">animals</a>
+                        <a href="/archive/interiors/">interiors</a>
+                        <a href="/archive/objects/">objects</a>
+                    </div>
+                </div>
 
-                <div class="menu-label">on paper</div>
+                <div class="submenu">
+                    <a href="/archive/paper/" class="submenu-title">on paper</a>
 
-                <a href="/archive/paper/">all paper</a>
+                    <div class="submenu-content">
+                        <a href="/archive/paper/">all paper</a>
+                    </div>
+                </div>
 
             </div>
         </div>
