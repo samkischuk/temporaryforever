@@ -116,7 +116,7 @@ const photos = [
         file: "DeskSpace.jpg",
         title: "Desk Space",
         medium: "photograph",
-        category: "places"
+        category: "interiors"
     },
 
     {
