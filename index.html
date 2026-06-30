@@ -55,10 +55,6 @@
 
         </a>
 
-        <p id="slideshow-caption">
-            easter children
-        </p>
-
     </div>
 
 </div>
@@ -67,25 +63,10 @@
 
 const slideshowPhotos = [
 
-    {
-        file: "EasterChildren.jpg",
-        title: "easter children"
-    },
-
-    {
-        file: "EasterChildren2.jpg",
-        title: "easter children ii"
-    },
-
-    {
-        file: "BaseballBoy.jpg",
-        title: "baseball boy"
-    },
-
-    {
-        file: "BaseballKids.jpg",
-        title: "baseball kids"
-    }
+    { file: "EasterChildren.jpg" },
+    { file: "EasterChildren2.jpg" },
+    { file: "BaseballBoy.jpg" },
+    { file: "BaseballKids.jpg" }
 
 ];
 
@@ -103,9 +84,6 @@ function showNextSlide() {
 
     document.getElementById("slideshow-image").src =
         "images/" + slideshowPhotos[slideIndex].file;
-
-    document.getElementById("slideshow-caption").textContent =
-        slideshowPhotos[slideIndex].title;
 
 }
 
