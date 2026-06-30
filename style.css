@@ -258,6 +258,8 @@ hr {
 
 /* MATCHBOOKS */
 
+/* MATCHBOOKS */
+
 .matchbook-gallery {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
@@ -268,6 +270,12 @@ hr {
 .matchbook-gallery .paper-thumbnail {
     width: 100%;
     padding: 4px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.matchbook-gallery .paper-thumbnail:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 14px 24px rgba(0,0,0,.16);
 }
 
 /* LIGHTBOX */
