@@ -1,8 +1,53 @@
-<div class="menu-label">on paper</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<a href="/archive/paper/">all paper</a>
-<a href="/archive/paper/letters/">letters</a>
-<a href="/archive/paper/postcards/">postcards</a>
-<a href="/archive/paper/cards/">cards</a>
-<a href="/archive/paper/yearbooks/">yearbooks</a>
-...
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all paper | Temporary Forever</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav></nav>
+
+    <a href="/" class="logo-link">
+        <img src="/images/TFLogo.png"
+             alt="Temporary Forever"
+             class="logo">
+    </a>
+
+    <h2 class="archive-title">all paper</h2>
+
+    <p class="archive-subtitle">
+        letters, postcards, yearbooks, maps, advertisements, and other paper ephemera preserved in the archive.
+    </p>
+
+    <div class="gallery" id="paper-gallery"></div>
+
+</div>
+
+<div id="lightbox">
+
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+
+    <button class="arrow left" onclick="previousImage(event)">❮</button>
+
+    <img id="lightbox-img"
+         src=""
+         alt="Expanded Paper Ephemera">
+
+    <button class="arrow right" onclick="nextImage(event)">❯</button>
+
+</div>
+
+<script src="/js/nav.js"></script>
+<script src="/js/paper.js"></script>
+<script src="/js/paper-archive.js"></script>
+
+</body>
+</html>
