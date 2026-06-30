@@ -244,18 +244,13 @@ hr {
 }
 
 .paper-thumbnail {
-    display: block;
-    width: 100%;
+    max-width: 360px;
+    max-height: 330px;
+    width: auto;
     height: auto;
-
-    background: white;
-    padding: 3px;
-    border: 1px solid #ddd;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,.08);
-
-    transition: transform .25s;
-    cursor: pointer;
+    object-fit: contain;
+    border: 8px solid white;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .paper-thumbnail:hover {
