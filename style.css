@@ -79,8 +79,8 @@ nav a:hover {
     margin-bottom: 6px;
     font-size: 11px;
     font-weight: bold;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-transform: none;
     color: #7d9f9b;
     border-bottom: 1px solid #d8d3c9;
     cursor: default;
@@ -92,7 +92,7 @@ nav a:hover {
     padding: 10px 30px;
     text-align: left;
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: none;
     color: #222;
 }
