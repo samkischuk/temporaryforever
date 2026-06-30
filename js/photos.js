@@ -14,5 +14,13 @@ const photos = [
     {
         file: "BaseballKids.jpg",
         title: "Baseball Kids"
+    },
+    {
+        file: "HolidayDinner.jpg",
+        title: "Holiday Dinner"
+    },
+    {
+        file: "YachtClubFamily.jpg",
+        title: "Yacht Club Family"
     }
 ];
