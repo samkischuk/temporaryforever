@@ -23,7 +23,7 @@ displayedItems.forEach((item, index) => {
 
     img.src = item.src;
     img.alt = item.title;
-    img.className = "thumbnail paper-thumbnail";
+ img.className = "paper-thumbnail";
 
     img.onclick = function () {
         openLightbox(index);
