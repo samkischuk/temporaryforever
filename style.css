@@ -449,4 +449,15 @@ hr {
     color: #54918e;
     border-bottom-color: #54918e;
 }
+/* ==========================
+   ABOUT PAGE
+========================== */
 
+.about-text {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2;
+    font-size: 17px;
+    color: #444;
+}
