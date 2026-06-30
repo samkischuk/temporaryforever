@@ -238,7 +238,11 @@ hr {
     gap: 30px;
     align-items: start;
 }
-
+#paper-gallery .paper-thumbnail[src*="ginos"],
+#paper-gallery .paper-thumbnail[src*="cvinn"] {
+    max-width: 190px;
+    justify-self: center;
+}
 .paper-thumbnail {
     width: 100%;
     height: auto;
