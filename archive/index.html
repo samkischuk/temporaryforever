@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,110 +9,58 @@
 </head>
 
 <body>
+
 <div class="container">
 
     <nav>
+
         <a href="/">Home</a>
 
         <div class="dropdown">
+
             <a href="/archive/">Archive</a>
+
             <div class="dropdown-content">
                 <a href="/archive/">All Photographs</a>
             </div>
+
         </div>
 
         <a href="/about/">About</a>
+
         <a href="/contact/">Contact</a>
+
     </nav>
 
-<a href="/" class="logo-link">
-    <img src="/images/TFLogo.png"
-         alt="Temporary Forever"
-         class="logo">
-</a>
+    <a href="/" class="logo-link">
+        <img src="/images/TFLogo.png"
+             alt="Temporary Forever"
+             class="logo">
+    </a>
 
     <div class="gallery" id="gallery"></div>
 
 </div>
 
+<!-- Lightbox -->
+
 <div id="lightbox">
+
     <button class="close-btn" onclick="closeLightbox()">×</button>
+
     <button class="arrow left" onclick="previousImage(event)">❮</button>
-    <img id="lightbox-img" src="" alt="Expanded Photograph">
+
+    <img id="lightbox-img"
+         src=""
+         alt="Expanded Photograph">
+
     <button class="arrow right" onclick="nextImage(event)">❯</button>
+
 </div>
 
-<script>
-const images = [
-    {
-        file: "EasterChildren.jpg",
-        alt: "Easter Children"
-    },
-    {
-        file: "EasterChildren2.jpg",
-        alt: "Easter Children II"
-    },
-    {
-        file: "BaseballBoy.jpg",
-        alt: "Baseball Boy"
-    },
-    {
-        file: "BaseballKids.jpg",
-        alt: "Baseball Kids"
-    }
-];
-
-let currentImage = 0;
-const gallery = document.getElementById("gallery");
-
-images.forEach((image, index) => {
-    const img = document.createElement("img");
-    img.src = "/images/" + image.file;
-    img.alt = image.alt;
-    img.className = "thumbnail";
-    img.onclick = () => openLightbox(index);
-    gallery.appendChild(img);
-});
-
-function openLightbox(index) {
-    currentImage = index;
-    document.getElementById("lightbox-img").src = "/images/" + images[currentImage].file;
-    document.getElementById("lightbox-img").alt = images[currentImage].alt;
-    document.getElementById("lightbox").style.display = "flex";
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-function nextImage(event) {
-    event.stopPropagation();
-    currentImage = (currentImage + 1) % images.length;
-    document.getElementById("lightbox-img").src = "/images/" + images[currentImage].file;
-    document.getElementById("lightbox-img").alt = images[currentImage].alt;
-}
-
-function previousImage(event) {
-    event.stopPropagation();
-    currentImage = (currentImage - 1 + images.length) % images.length;
-    document.getElementById("lightbox-img").src = "/images/" + images[currentImage].file;
-    document.getElementById("lightbox-img").alt = images[currentImage].alt;
-}
-
-document.getElementById("lightbox").addEventListener("click", closeLightbox);
-
-document.getElementById("lightbox-img").addEventListener("click", function(event) {
-    event.stopPropagation();
-});
-
-document.addEventListener("keydown", function(event) {
-    if (document.getElementById("lightbox").style.display !== "flex") return;
-
-    if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowRight") nextImage(event);
-    if (event.key === "ArrowLeft") previousImage(event);
-});
-</script>
+<script src="/js/photos.js"></script>
+<script src="/js/archive.js"></script>
 
 </body>
+
 </html>
