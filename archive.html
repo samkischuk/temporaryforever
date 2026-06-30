@@ -32,7 +32,9 @@
 
     </nav>
 
-    <img src="images/tflogo.png" alt="Temporary Forever" class="logo">
+    <img src="images/TFLogo.png"
+         alt="Temporary Forever"
+         class="logo">
 
     <h2 class="archive-heading">All Photographs</h2>
 
@@ -56,39 +58,14 @@
 
 <script>
 
-/* ==========================
-   ADD PHOTOS HERE
-========================== */
-
 const images = [
 
     {
-        file: "easterchildren.jpg",
+        file: "EasterChildren.jpg",
         alt: "Vintage Easter Photograph"
     }
 
-    /*
-    Add more like this:
-
-    ,
-    {
-        file: "beach1958.jpg",
-        alt: "Unknown family at the beach"
-    }
-
-    ,
-    {
-        file: "dogporch.jpg",
-        alt: "Dog on front porch"
-    }
-
-    */
-
 ];
-
-/* ==========================
-   DO NOT EDIT BELOW
-========================== */
 
 let currentImage = 0;
 
@@ -181,31 +158,13 @@ document.addEventListener("keydown", function(event){
 
     if(event.key === "ArrowRight"){
 
-        currentImage++;
-
-        if(currentImage >= images.length){
-
-            currentImage = 0;
-
-        }
-
-        document.getElementById("lightbox-img").src =
-            "images/" + images[currentImage].file;
+        nextImage(event);
 
     }
 
     if(event.key === "ArrowLeft"){
 
-        currentImage--;
-
-        if(currentImage < 0){
-
-            currentImage = images.length - 1;
-
-        }
-
-        document.getElementById("lightbox-img").src =
-            "images/" + images[currentImage].file;
+        previousImage(event);
 
     }
 
