@@ -1,43 +1,35 @@
 const photos = [
 
-    {
-        file: "PipeMan2.jpg",
-        title: "Pipe Man II"
-    },
+    { file: "Curlers.jpg", title: "Curlers" },
+    { file: "Wavy.jpg", title: "Wavy" },
+    { file: "OnTheRocks.jpg", title: "On the Rocks" },
+    { file: "Garage.jpg", title: "Garage" },
+    { file: "SmilingLadies.jpg", title: "Smiling Ladies" },
+    { file: "FamilyTies.jpg", title: "Family Ties" },
+    { file: "Tiger.jpg", title: "Tiger" },
+    { file: "PolarBear.jpg", title: "Polar Bear" },
+    { file: "RaccoonHat.jpg", title: "Raccoon Hat" },
+    { file: "AxeMan.jpg", title: "Axe Man" },
+    { file: "LivingRoom.jpg", title: "Living Room" },
+    { file: "Clown2.jpg", title: "Clown II" },
+    { file: "Clown.jpg", title: "Clown" },
+    { file: "StainedGlass.jpg", title: "Stained Glass" },
+    { file: "HornSection.jpg", title: "Horn Section" },
+    { file: "InTheBand.jpg", title: "In the Band" },
+    { file: "DeskSpace.jpg", title: "Desk Space" },
+    { file: "OfficeSpace.jpg", title: "Office Space" },
+    { file: "GirlInDress.jpg", title: "Girl in Dress" },
+    { file: "GlowInTheDark.jpg", title: "Glow in the Dark" },
+    { file: "RockFace.jpg", title: "Rock Face" },
+    { file: "ManWithCamera.jpg", title: "Man with Camera" },
 
-    {
-        file: "PipeMan.jpg",
-        title: "Pipe Man"
-    },
-
-    {
-        file: "YachtClubFamily.jpg",
-        title: "Yacht Club Family"
-    },
-
-    {
-        file: "HolidayDinner.jpg",
-        title: "Holiday Dinner"
-    },
-
-    {
-        file: "BaseballKids.jpg",
-        title: "Baseball Kids"
-    },
-
-    {
-        file: "BaseballBoy.jpg",
-        title: "Baseball Boy"
-    },
-
-    {
-        file: "EasterChildren2.jpg",
-        title: "Easter Children II"
-    },
-
-    {
-        file: "EasterChildren.jpg",
-        title: "Easter Children"
-    }
+    { file: "PipeMan2.jpg", title: "Pipe Man II" },
+    { file: "PipeMan.jpg", title: "Pipe Man" },
+    { file: "YachtClubFamily.jpg", title: "Yacht Club Family" },
+    { file: "HolidayDinner.jpg", title: "Holiday Dinner" },
+    { file: "BaseballKids.jpg", title: "Baseball Kids" },
+    { file: "BaseballBoy.jpg", title: "Baseball Boy" },
+    { file: "EasterChildren2.jpg", title: "Easter Children II" },
+    { file: "EasterChildren.jpg", title: "Easter Children" }
 
 ];
