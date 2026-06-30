@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Photographs | Temporary Forever</title>
+    <title>Temporary Forever</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,43 +13,38 @@
 <div class="container">
 
     <nav>
+
         <a href="index.html">Home</a>
 
         <div class="dropdown">
+
             <a href="archive.html">Archive</a>
+
             <div class="dropdown-content">
                 <a href="archive.html">All Photographs</a>
             </div>
+
         </div>
 
         <a href="about.html">About</a>
+
         <a href="contact.html">Contact</a>
+
     </nav>
 
     <img src="images/tflogo.png" alt="Temporary Forever" class="logo">
 
-    <h2 class="archive-heading">All Photographs</h2>
+    <p class="tagline">
+        A growing archive of anonymous photographs, negatives, and ephemera rescued from thrift stores, estate sales, flea markets, forgotten boxes, and anywhere else history was nearly discarded.
+    </p>
 
-    <div class="gallery">
-        <img src="images/easterchildren.jpg" alt="Vintage Easter Photograph" class="thumbnail" onclick="openLightbox(this.src)">
-    </div>
+    <hr>
+
+    <img src="images/easterchildren.jpg"
+         alt="Vintage Easter Photograph"
+         class="photo">
 
 </div>
-
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Expanded photograph">
-</div>
-
-<script>
-    function openLightbox(imageSrc) {
-        document.getElementById("lightbox-img").src = imageSrc;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-</script>
 
 </body>
 
