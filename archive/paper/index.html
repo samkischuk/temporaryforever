@@ -37,17 +37,21 @@
 
     <button class="arrow left" onclick="previousImage(event)">❮</button>
 
-    <img id="lightbox-img"
-         src=""
-         alt="Expanded Paper Ephemera">
+    <div class="lightbox-image-wrap">
+        <img id="lightbox-img"
+             src=""
+             alt="Expanded Paper Ephemera">
+
+        <div id="lightbox-flip-text"></div>
+    </div>
 
     <button class="arrow right" onclick="nextImage(event)">❯</button>
 
 </div>
 
+<script src="/js/paper-archive.js"></script>
 <script src="/js/nav.js"></script>
 <script src="/js/paper.js"></script>
-<script src="/js/paper-archive.js"></script>
 
 </body>
 </html>
