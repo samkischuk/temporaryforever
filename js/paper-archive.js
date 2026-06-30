@@ -7,7 +7,7 @@ paperItems.forEach((item, index) => {
 
     img.src = item.src;
     img.alt = item.title;
- img.className = "thumbnail paper-thumbnail";
+    img.className = "thumbnail paper-thumbnail";
 
     img.onclick = function () {
         openLightbox(index);
@@ -15,34 +15,3 @@ paperItems.forEach((item, index) => {
 
     gallery.appendChild(img);
 });
-
-function openLightbox(index) {
-    currentImageIndex = index;
-
-    document.getElementById("lightbox-img").src = paperItems[index].src;
-    document.getElementById("lightbox").style.display = "flex";
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-function previousImage(event) {
-    event.stopPropagation();
-
-    currentImageIndex =
-        (currentImageIndex - 1 + paperItems.length) % paperItems.length;
-
-    document.getElementById("lightbox-img").src =
-        paperItems[currentImageIndex].src;
-}
-
-function nextImage(event) {
-    event.stopPropagation();
-
-    currentImageIndex =
-        (currentImageIndex + 1) % paperItems.length;
-
-    document.getElementById("lightbox-img").src =
-        paperItems[currentImageIndex].src;
-}
