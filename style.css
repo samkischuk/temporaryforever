@@ -33,6 +33,10 @@ nav {
 }
 
 nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: #222;
     text-decoration: none;
     font-size: 14px;
@@ -51,9 +55,8 @@ nav a:hover {
 
 .dropdown {
     position: relative;
-    display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: -20px;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-content {
