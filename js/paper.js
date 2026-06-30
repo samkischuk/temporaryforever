@@ -11,6 +11,8 @@ if (path.includes("advertisements")) {
     displayedItems = paperItems.filter(item => item.category === "advertisements");
 } else if (path.includes("postcards")) {
     displayedItems = paperItems.filter(item => item.category === "postcards");
+} else if (path.includes("matchbooks")) {
+    displayedItems = paperItems.filter(item => item.category === "matchbooks");
 }
 
 displayedItems.reverse();
@@ -26,15 +28,11 @@ displayedItems.forEach((item, index) => {
 
     if (item.hoverSrc) {
         img.addEventListener("mouseenter", () => {
-            if (!isMobile()) {
-                img.src = item.hoverSrc;
-            }
+            if (!isMobile()) img.src = item.hoverSrc;
         });
 
         img.addEventListener("mouseleave", () => {
-            if (!isMobile()) {
-                img.src = item.src;
-            }
+            if (!isMobile()) img.src = item.src;
         });
     }
 
@@ -77,8 +75,7 @@ function previousImage(event) {
     event.stopPropagation();
 
     currentImageIndex =
-        (currentImageIndex - 1 + displayedItems.length) %
-        displayedItems.length;
+        (currentImageIndex - 1 + displayedItems.length) % displayedItems.length;
 
     showingBack = false;
 
@@ -91,9 +88,7 @@ function previousImage(event) {
 function nextImage(event) {
     event.stopPropagation();
 
-    currentImageIndex =
-        (currentImageIndex + 1) %
-        displayedItems.length;
+    currentImageIndex = (currentImageIndex + 1) % displayedItems.length;
 
     showingBack = false;
 
