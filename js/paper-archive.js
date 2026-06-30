@@ -10,7 +10,7 @@ const paperItems = [
         title: "Mt. Baker Postcard",
         category: "postcards"
     },
-{
+    {
         src: "/images/paper/majestichotelfront.jpg",
         hoverSrc: "/images/paper/majestichotelback.jpg",
         title: "Majestic Hotel Postcard",
