@@ -1,4 +1,6 @@
 let currentImageIndex = 0;
+let showingBack = false;
+
 const gallery = document.getElementById("paper-gallery");
 
 let displayedItems = [...paperItems];
@@ -53,8 +55,14 @@ function isMobile() {
 
 function openLightbox(index) {
     currentImageIndex = index;
-    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
+    showingBack = false;
+
+    const item = displayedItems[currentImageIndex];
+
+    document.getElementById("lightbox-img").src = item.src;
     document.getElementById("lightbox").style.display = "flex";
+
+    updateFlipText();
 }
 
 function closeLightbox() {
@@ -63,12 +71,52 @@ function closeLightbox() {
 
 function previousImage(event) {
     event.stopPropagation();
+
     currentImageIndex = (currentImageIndex - 1 + displayedItems.length) % displayedItems.length;
+    showingBack = false;
+
     document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
+
+    updateFlipText();
 }
 
 function nextImage(event) {
     event.stopPropagation();
+
     currentImageIndex = (currentImageIndex + 1) % displayedItems.length;
+    showingBack = false;
+
     document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
+
+    updateFlipText();
 }
+
+function flipLightboxImage(event) {
+    event.stopPropagation();
+
+    const item = displayedItems[currentImageIndex];
+
+    if (!item.hoverSrc) return;
+
+    showingBack = !showingBack;
+
+    document.getElementById("lightbox-img").src = showingBack ? item.hoverSrc : item.src;
+
+    updateFlipText();
+}
+
+function updateFlipText() {
+    const flipText = document.getElementById("lightbox-flip-text");
+    const item = displayedItems[currentImageIndex];
+
+    if (!flipText) return;
+
+    if (item.hoverSrc) {
+        flipText.style.display = "block";
+        flipText.textContent = showingBack ? "back ↔ front" : "front ↔ back";
+    } else {
+        flipText.style.display = "none";
+    }
+}
+
+document.getElementById("lightbox-img").addEventListener("click", flipLightboxImage);
