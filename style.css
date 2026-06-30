@@ -242,15 +242,32 @@ hr {
     gap: 30px;
     align-items: start;
 }
+/* PAPER ARCHIVE */
+
+#paper-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
 
 .paper-thumbnail {
-    max-width: 360px;
-    max-height: 330px;
+    display: block;
+    max-width: 320px;
+    max-height: 260px;
     width: auto;
     height: auto;
+
     object-fit: contain;
-    border: 8px solid white;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+
+    padding: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+
+    transition: transform .2s ease;
+    box-sizing: border-box;
 }
 
 .paper-thumbnail:hover {
@@ -504,14 +521,17 @@ hr {
         gap: 24px;
     }
 
-    #paper-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-    }
+   #paper-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
 
-   .paper-thumbnail {
-    height: auto;
-    padding: 3px;
+.paper-thumbnail {
+    max-width: 44%;
+    max-height: none;
+    padding: 4px;
 }
 
     .archive-title,
