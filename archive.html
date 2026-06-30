@@ -62,7 +62,22 @@ const images = [
 
     {
         file: "EasterChildren.jpg",
-        alt: "Vintage Easter Photograph"
+        alt: "Easter Children"
+    },
+
+    {
+        file: "EasterChildren2.jpg",
+        alt: "Easter Children II"
+    },
+
+    {
+        file: "BaseballBoy.jpg",
+        alt: "Baseball Boy"
+    },
+
+    {
+        file: "BaseballKids.jpg",
+        alt: "Baseball Kids"
     }
 
 ];
@@ -94,6 +109,9 @@ function openLightbox(index) {
     document.getElementById("lightbox-img").src =
         "images/" + images[currentImage].file;
 
+    document.getElementById("lightbox-img").alt =
+        images[currentImage].alt;
+
     document.getElementById("lightbox").style.display = "flex";
 
 }
@@ -111,13 +129,14 @@ function nextImage(event) {
     currentImage++;
 
     if (currentImage >= images.length) {
-
         currentImage = 0;
-
     }
 
     document.getElementById("lightbox-img").src =
         "images/" + images[currentImage].file;
+
+    document.getElementById("lightbox-img").alt =
+        images[currentImage].alt;
 
 }
 
@@ -128,44 +147,37 @@ function previousImage(event) {
     currentImage--;
 
     if (currentImage < 0) {
-
         currentImage = images.length - 1;
-
     }
 
     document.getElementById("lightbox-img").src =
         "images/" + images[currentImage].file;
 
+    document.getElementById("lightbox-img").alt =
+        images[currentImage].alt;
+
 }
 
 document.getElementById("lightbox").addEventListener("click", closeLightbox);
 
-document.getElementById("lightbox-img").addEventListener("click", function(event){
-
+document.getElementById("lightbox-img").addEventListener("click", function(event) {
     event.stopPropagation();
-
 });
 
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function(event) {
 
-    if(document.getElementById("lightbox").style.display !== "flex") return;
+    if (document.getElementById("lightbox").style.display !== "flex") return;
 
-    if(event.key === "Escape"){
-
+    if (event.key === "Escape") {
         closeLightbox();
-
     }
 
-    if(event.key === "ArrowRight"){
-
+    if (event.key === "ArrowRight") {
         nextImage(event);
-
     }
 
-    if(event.key === "ArrowLeft"){
-
+    if (event.key === "ArrowLeft") {
         previousImage(event);
-
     }
 
 });
@@ -173,5 +185,4 @@ document.addEventListener("keydown", function(event){
 </script>
 
 </body>
-
 </html>
