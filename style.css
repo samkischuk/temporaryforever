@@ -461,3 +461,34 @@ hr {
     font-size: 17px;
     color: #444;
 }
+.submenu {
+    position: relative;
+}
+
+.submenu-title {
+    position: relative;
+}
+
+.submenu-title::after {
+    content: " →";
+    font-size: 0.8em;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 230px;
+    background: #faf8f1;
+    border: 1px solid #d8d2c6;
+    z-index: 999;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+.submenu-content a {
+    display: block;
+}
