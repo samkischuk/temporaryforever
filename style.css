@@ -533,7 +533,26 @@ hr {
     max-height: none;
     padding: 4px;
 }
+.matchbook-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 18px;
+    align-items: start;
+}
 
+.matchbook-gallery .paper-thumbnail {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    height: auto;
+
+    padding: 4px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+
+    object-fit: contain;
+}
     .archive-title,
     .archive-heading {
         font-size: 20px;
