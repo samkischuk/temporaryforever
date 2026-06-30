@@ -18,9 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-/* ==========================
-   NAVIGATION
-========================== */
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -46,9 +44,7 @@ nav a:hover {
     color: #54918e;
 }
 
-/* ==========================
-   DROPDOWN
-========================== */
+/* DROPDOWN */
 
 .dropdown {
     position: relative;
@@ -74,26 +70,19 @@ nav a:hover {
     display: block;
     padding: 14px 20px;
     text-align: center;
-    color: #222;
-    text-decoration: none;
     font-size: 12px;
-    font-weight: bold;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .dropdown-content a:hover {
     background: #efebe2;
-    color: #54918e;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* ==========================
-   LOGO
-========================== */
+/* LOGO */
 
 .logo {
     display: block;
@@ -103,9 +92,7 @@ nav a:hover {
     margin: 0 auto 25px;
 }
 
-/* ==========================
-   TAGLINE
-========================== */
+/* TEXT */
 
 .tagline {
     text-align: center;
@@ -116,9 +103,15 @@ nav a:hover {
     color: #444;
 }
 
-/* ==========================
-   DIVIDER
-========================== */
+.caption,
+.description {
+    max-width: 520px;
+    margin: 25px auto 0;
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
 
 hr {
     width: 120px;
@@ -127,9 +120,7 @@ hr {
     margin: 35px auto 45px;
 }
 
-/* ==========================
-   FEATURED PHOTO
-========================== */
+/* FEATURED PHOTO */
 
 .photo {
     display: block;
@@ -143,22 +134,7 @@ hr {
     box-sizing: border-box;
 }
 
-/* ==========================
-   CAPTION
-========================== */
-
-.caption {
-    max-width: 520px;
-    margin: 25px auto 0;
-    text-align: center;
-    line-height: 1.8;
-    color: #555;
-    font-size: 16px;
-}
-
-/* ==========================
-   ARCHIVE
-========================== */
+/* ARCHIVE */
 
 .archive-heading {
     text-align: center;
@@ -191,9 +167,7 @@ hr {
     cursor: pointer;
 }
 
-/* ==========================
-   LIGHTBOX
-========================== */
+/* LIGHTBOX */
 
 #lightbox {
     display: none;
@@ -247,4 +221,88 @@ hr {
 .arrow:hover,
 .close-btn:hover {
     opacity: .6;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 14px;
+        padding: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 28px;
+        padding-bottom: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .dropdown {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        min-width: 180px;
+    }
+
+    .logo {
+        width: 300px;
+        max-width: 100%;
+        margin: 10px auto 25px;
+    }
+
+    .tagline {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    hr {
+        margin: 28px auto 35px;
+    }
+
+    .photo {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .archive-heading {
+        font-size: 20px;
+    }
+
+    .arrow {
+        font-size: 42px;
+        padding: 10px;
+    }
+
+    .left {
+        left: 8px;
+    }
+
+    .right {
+        right: 8px;
+    }
+
+    .close-btn {
+        font-size: 36px;
+        top: 15px;
+        right: 20px;
+    }
 }
