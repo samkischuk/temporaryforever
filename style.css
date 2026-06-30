@@ -542,3 +542,18 @@ hr {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================
+   ABOUT PHOTO
+========================== */
+
+.about-photo {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.about-photo .photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
