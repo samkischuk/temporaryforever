@@ -5,11 +5,11 @@ const gallery = document.getElementById("paper-gallery");
 
 let displayedItems = [...paperItems];
 
-if (window.location.pathname.includes("/advertisements/")) {
-    displayedItems = paperItems.filter(item => item.category === "advertisements");
-}
+const path = window.location.pathname.toLowerCase();
 
-if (window.location.pathname.includes("/postcards/")) {
+if (path.includes("advertisements")) {
+    displayedItems = paperItems.filter(item => item.category === "advertisements");
+} else if (path.includes("postcards")) {
     displayedItems = paperItems.filter(item => item.category === "postcards");
 }
 
@@ -25,16 +25,20 @@ displayedItems.forEach((item, index) => {
     let flipped = false;
 
     if (item.hoverSrc) {
-        img.addEventListener("mouseenter", function () {
-            if (!isMobile()) img.src = item.hoverSrc;
+        img.addEventListener("mouseenter", () => {
+            if (!isMobile()) {
+                img.src = item.hoverSrc;
+            }
         });
 
-        img.addEventListener("mouseleave", function () {
-            if (!isMobile()) img.src = item.src;
+        img.addEventListener("mouseleave", () => {
+            if (!isMobile()) {
+                img.src = item.src;
+            }
         });
     }
 
-    img.onclick = function () {
+    img.addEventListener("click", () => {
         if (isMobile() && item.hoverSrc && !flipped) {
             img.src = item.hoverSrc;
             flipped = true;
@@ -42,9 +46,9 @@ displayedItems.forEach((item, index) => {
         }
 
         img.src = item.src;
-        openLightbox(index);
         flipped = false;
-    };
+        openLightbox(index);
+    });
 
     gallery.appendChild(img);
 });
@@ -72,10 +76,14 @@ function closeLightbox() {
 function previousImage(event) {
     event.stopPropagation();
 
-    currentImageIndex = (currentImageIndex - 1 + displayedItems.length) % displayedItems.length;
+    currentImageIndex =
+        (currentImageIndex - 1 + displayedItems.length) %
+        displayedItems.length;
+
     showingBack = false;
 
-    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
+    document.getElementById("lightbox-img").src =
+        displayedItems[currentImageIndex].src;
 
     updateFlipText();
 }
@@ -83,10 +91,14 @@ function previousImage(event) {
 function nextImage(event) {
     event.stopPropagation();
 
-    currentImageIndex = (currentImageIndex + 1) % displayedItems.length;
+    currentImageIndex =
+        (currentImageIndex + 1) %
+        displayedItems.length;
+
     showingBack = false;
 
-    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
+    document.getElementById("lightbox-img").src =
+        displayedItems[currentImageIndex].src;
 
     updateFlipText();
 }
@@ -100,23 +112,29 @@ function flipLightboxImage(event) {
 
     showingBack = !showingBack;
 
-    document.getElementById("lightbox-img").src = showingBack ? item.hoverSrc : item.src;
+    document.getElementById("lightbox-img").src =
+        showingBack ? item.hoverSrc : item.src;
 
     updateFlipText();
 }
 
 function updateFlipText() {
     const flipText = document.getElementById("lightbox-flip-text");
-    const item = displayedItems[currentImageIndex];
 
     if (!flipText) return;
 
+    const item = displayedItems[currentImageIndex];
+
     if (item.hoverSrc) {
         flipText.style.display = "block";
-        flipText.textContent = showingBack ? "back ↔ front" : "front ↔ back";
+        flipText.textContent = showingBack
+            ? "click image to view front"
+            : "click image to view back";
     } else {
         flipText.style.display = "none";
     }
 }
 
-document.getElementById("lightbox-img").addEventListener("click", flipLightboxImage);
+document
+    .getElementById("lightbox-img")
+    .addEventListener("click", flipLightboxImage);
