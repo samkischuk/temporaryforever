@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="/archive/paper/">all paper</a>
                         <a href="/archive/paper/postcards/">postcards</a>
                         <a href="/archive/paper/advertisements/">advertisements</a>
+                        <a href="/archive/paper/matchbooks/">matchbooks</a>
                     </div>
                 </div>
 
