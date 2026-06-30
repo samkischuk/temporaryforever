@@ -5,8 +5,8 @@ const paperItems = [
         category: "advertisements"
     },
       {
-    src: "/images/paper/MtBakerFront.jpg",
-    hoverSrc: "/images/paper/MtBakerBack.jpg",
+    src: "/images/paper/mtbakerfront.jpg",
+    hoverSrc: "/images/paper/mtbakerback.jpg",
     title: "Mt. Baker Postcard",
     category: "postcards"
 }
