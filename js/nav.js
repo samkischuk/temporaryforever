@@ -11,12 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="menu-label">photographs</div>
 
-<a href="/archive/">all photographs</a>
-<a href="/archive/people/">people</a>
-<a href="/archive/places/">places</a>
-<a href="/archive/animals/">animals</a>
-<a href="/archive/interiors/">interiors</a>
-<a href="/archive/objects/">objects</a>
+                <a href="/archive/">all photographs</a>
+                <a href="/archive/people/">people</a>
+                <a href="/archive/places/">places</a>
+                <a href="/archive/animals/">animals</a>
+                <a href="/archive/interiors/">interiors</a>
+                <a href="/archive/objects/">objects</a>
+
+                <div class="menu-label">on paper</div>
+
+                <a href="/archive/paper/">all paper</a>
 
             </div>
         </div>
