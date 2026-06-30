@@ -7,7 +7,7 @@ paperItems.forEach((item, index) => {
 
     img.src = item.src;
     img.alt = item.title;
-    img.className = "gallery-img";
+ img.className = "thumbnail paper-thumbnail";
 
     img.onclick = function () {
         openLightbox(index);
