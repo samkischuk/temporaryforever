@@ -31,68 +31,24 @@
     <h2 class="archive-heading">All Photographs</h2>
 
     <div class="gallery">
-        <img src="images/easterchildren.jpg" alt="Vintage Easter Photograph" class="thumbnail" onclick="openLightbox(0)">
+        <img src="images/easterchildren.jpg" alt="Vintage Easter Photograph" class="thumbnail" onclick="openLightbox(this.src)">
     </div>
 
 </div>
 
-<div id="lightbox">
-    <button class="close-btn" onclick="closeLightbox()">×</button>
-    <button class="arrow left" onclick="previousImage(event)">‹</button>
+<div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Expanded photograph">
-    <button class="arrow right" onclick="nextImage(event)">›</button>
 </div>
 
 <script>
-    const images = [
-        "images/easterchildren.jpg"
-    ];
-
-    let currentImage = 0;
-
-    function openLightbox(index) {
-        currentImage = index;
-        document.getElementById("lightbox-img").src = images[currentImage];
+    function openLightbox(imageSrc) {
+        document.getElementById("lightbox-img").src = imageSrc;
         document.getElementById("lightbox").style.display = "flex";
     }
 
     function closeLightbox() {
         document.getElementById("lightbox").style.display = "none";
     }
-
-    function nextImage(event) {
-        event.stopPropagation();
-        currentImage = (currentImage + 1) % images.length;
-        document.getElementById("lightbox-img").src = images[currentImage];
-    }
-
-    function previousImage(event) {
-        event.stopPropagation();
-        currentImage = (currentImage - 1 + images.length) % images.length;
-        document.getElementById("lightbox-img").src = images[currentImage];
-    }
-
-    document.getElementById("lightbox").addEventListener("click", closeLightbox);
-
-    document.getElementById("lightbox-img").addEventListener("click", function(event) {
-        event.stopPropagation();
-    });
-
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-
-        if (event.key === "ArrowRight") {
-            currentImage = (currentImage + 1) % images.length;
-            document.getElementById("lightbox-img").src = images[currentImage];
-        }
-
-        if (event.key === "ArrowLeft") {
-            currentImage = (currentImage - 1 + images.length) % images.length;
-            document.getElementById("lightbox-img").src = images[currentImage];
-        }
-    });
 </script>
 
 </body>
