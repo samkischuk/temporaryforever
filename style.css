@@ -19,9 +19,7 @@ body {
     overflow: visible;
 }
 
-/* ==========================
-   NAVIGATION
-========================== */
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -49,9 +47,7 @@ nav a:hover {
     color: #54918e;
 }
 
-/* ==========================
-   DROPDOWN
-========================== */
+/* DROPDOWN */
 
 .dropdown {
     position: relative;
@@ -89,9 +85,12 @@ nav a:hover {
     display: block;
 }
 
-/* ==========================
-   LOGO
-========================== */
+/* LOGO */
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
 
 .logo {
     display: block;
@@ -101,9 +100,7 @@ nav a:hover {
     margin: 0 auto 25px;
 }
 
-/* ==========================
-   TEXT
-========================== */
+/* TEXT */
 
 .tagline {
     text-align: center;
@@ -131,11 +128,10 @@ hr {
     margin: 35px auto 45px;
 }
 
-/* ==========================
-   FEATURED PHOTO
-========================== */
+/* FEATURED PHOTO / SLIDESHOW */
 
-.photo {
+.photo,
+#slideshow-image {
     display: block;
     width: 500px;
     max-width: 100%;
@@ -147,9 +143,11 @@ hr {
     box-sizing: border-box;
 }
 
-/* ==========================
-   ARCHIVE
-========================== */
+.slideshow {
+    text-align: center;
+}
+
+/* ARCHIVE */
 
 .archive-heading {
     text-align: center;
@@ -182,9 +180,7 @@ hr {
     cursor: pointer;
 }
 
-/* ==========================
-   LIGHTBOX
-========================== */
+/* LIGHTBOX */
 
 #lightbox {
     display: none;
@@ -240,16 +236,9 @@ hr {
     opacity: .6;
 }
 
-/* ==========================
-   MOBILE FIXES
-========================== */
+/* MOBILE */
 
 @media (max-width: 700px) {
-
-    body {
-        background: #54918e;
-    }
-
     .container {
         margin: 14px;
         padding: 24px 18px 34px;
@@ -258,27 +247,27 @@ hr {
     }
 
     nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        gap: 14px 22px;
+        justify-items: center;
+        gap: 0;
         margin-bottom: 28px;
         padding-bottom: 18px;
-        line-height: 1.6;
+        border-bottom: 1px solid #d8d3c9;
         overflow: visible;
     }
 
     nav a {
-        font-size: 11px;
-        letter-spacing: 2px;
+        font-size: 10px;
+        letter-spacing: 1.2px;
         white-space: nowrap;
     }
 
     .dropdown {
         position: relative;
-        padding-bottom: 0;
-        margin-bottom: 0;
+        padding: 0;
+        margin: 0;
         text-align: center;
     }
 
@@ -287,19 +276,19 @@ hr {
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        min-width: 180px;
+        min-width: 175px;
         margin-top: 8px;
     }
 
     .dropdown-content a {
-        font-size: 11px;
-        padding: 12px 16px;
+        font-size: 10px;
+        padding: 12px 14px;
     }
 
     .logo {
         width: 300px;
         max-width: 100%;
-        margin: 10px auto 25px;
+        margin: 12px auto 25px;
     }
 
     .tagline {
@@ -318,7 +307,8 @@ hr {
         margin: 28px auto 35px;
     }
 
-    .photo {
+    .photo,
+    #slideshow-image {
         width: 100%;
         padding: 8px;
     }
@@ -349,5 +339,17 @@ hr {
         font-size: 36px;
         top: 15px;
         right: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    nav a {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
     }
 }
