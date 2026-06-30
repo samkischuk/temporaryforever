@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <div class="submenu-content">
                         <a href="/archive/paper/">all paper</a>
+                        <a href="/archive/paper/postcards/">postcards</a>
+                        <a href="/archive/paper/advertisements/">advertisements</a>
                     </div>
                 </div>
 
