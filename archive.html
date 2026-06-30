@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Photographs | Temporary Forever</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+
+            <a href="archive.html">Archive</a>
+
+            <div class="dropdown-content">
+                <a href="archive.html">All Photographs</a>
+            </div>
+
+        </div>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <img src="images/tflogo.png" alt="Temporary Forever" class="logo">
+
+    <h2 class="archive-heading">All Photographs</h2>
+
+    <div class="gallery" id="gallery"></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+
+    <button class="arrow left" onclick="previousImage(event)">❮</button>
+
+    <img id="lightbox-img" src="" alt="Expanded Photograph">
+
+    <button class="arrow right" onclick="nextImage(event)">❯</button>
+
+</div>
+
+<script>
+
+/* ==========================
+   ADD PHOTOS HERE
+========================== */
+
+const images = [
+
+    {
+        file: "easterchildren.jpg",
+        alt: "Vintage Easter Photograph"
+    }
+
+    /*
+    Add more like this:
+
+    ,
+    {
+        file: "beach1958.jpg",
+        alt: "Unknown family at the beach"
+    }
+
+    ,
+    {
+        file: "dogporch.jpg",
+        alt: "Dog on front porch"
+    }
+
+    */
+
+];
+
+/* ==========================
+   DO NOT EDIT BELOW
+========================== */
+
+let currentImage = 0;
+
+const gallery = document.getElementById("gallery");
+
+images.forEach((image, index) => {
+
+    const img = document.createElement("img");
+
+    img.src = "images/" + image.file;
+
+    img.alt = image.alt;
+
+    img.className = "thumbnail";
+
+    img.onclick = () => openLightbox(index);
+
+    gallery.appendChild(img);
+
+});
+
+function openLightbox(index) {
+
+    currentImage = index;
+
+    document.getElementById("lightbox-img").src =
+        "images/" + images[currentImage].file;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+}
+
+function closeLightbox() {
+
+    document.getElementById("lightbox").style.display = "none";
+
+}
+
+function nextImage(event) {
+
+    event.stopPropagation();
+
+    currentImage++;
+
+    if (currentImage >= images.length) {
+
+        currentImage = 0;
+
+    }
+
+    document.getElementById("lightbox-img").src =
+        "images/" + images[currentImage].file;
+
+}
+
+function previousImage(event) {
+
+    event.stopPropagation();
+
+    currentImage--;
+
+    if (currentImage < 0) {
+
+        currentImage = images.length - 1;
+
+    }
+
+    document.getElementById("lightbox-img").src =
+        "images/" + images[currentImage].file;
+
+}
+
+document.getElementById("lightbox").addEventListener("click", closeLightbox);
+
+document.getElementById("lightbox-img").addEventListener("click", function(event){
+
+    event.stopPropagation();
+
+});
+
+document.addEventListener("keydown", function(event){
+
+    if(document.getElementById("lightbox").style.display !== "flex") return;
+
+    if(event.key === "Escape"){
+
+        closeLightbox();
+
+    }
+
+    if(event.key === "ArrowRight"){
+
+        currentImage++;
+
+        if(currentImage >= images.length){
+
+            currentImage = 0;
+
+        }
+
+        document.getElementById("lightbox-img").src =
+            "images/" + images[currentImage].file;
+
+    }
+
+    if(event.key === "ArrowLeft"){
+
+        currentImage--;
+
+        if(currentImage < 0){
+
+            currentImage = images.length - 1;
+
+        }
+
+        document.getElementById("lightbox-img").src =
+            "images/" + images[currentImage].file;
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
