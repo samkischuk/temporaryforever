@@ -357,3 +357,40 @@ hr {
         padding-right: 14px;
     }
 }
+
+/* ==========================
+   HOMEPAGE LINKS
+========================== */
+
+.home-actions {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.home-link {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #222;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.home-link:hover {
+    color: #54918e;
+}
+
+.random-button {
+    padding: 0;
+}
+
+.or {
+    margin: 18px 0;
+    color: #777;
+    font-style: italic;
+}
