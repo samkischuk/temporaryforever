@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="dropdown-content">
 
-                <div class="menu-label">Photographs</div>
+                <div class="menu-label">photographs</div>
 
-                <a href="/archive/">All Photographs</a>
-                <a href="/archive/people/">People</a>
-                <a href="/archive/places/">Places</a>
-                <a href="/archive/animals/">Animals</a>
-                <a href="/archive/interiors/">Interiors</a>
-                <a href="/archive/objects/">Objects</a>
+<a href="/archive/">all photographs</a>
+<a href="/archive/people/">people</a>
+<a href="/archive/places/">places</a>
+<a href="/archive/animals/">animals</a>
+<a href="/archive/interiors/">interiors</a>
+<a href="/archive/objects/">objects</a>
 
             </div>
         </div>
