@@ -1,39 +1,39 @@
-let currentImageIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    let currentImageIndex = 0;
 
-const gallery = document.getElementById("paper-gallery");
+    const gallery = document.getElementById("paper-gallery");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-paperItems.forEach((item, index) => {
-    const img = document.createElement("img");
+    paperItems.forEach((item, index) => {
+        const img = document.createElement("img");
 
-    img.src = item.src;
-    img.alt = item.title;
-    img.className = "thumbnail paper-thumbnail";
+        img.src = item.src;
+        img.alt = item.title;
+        img.className = "thumbnail paper-thumbnail";
 
-    img.onclick = function () {
-        openLightbox(index);
+        img.onclick = function () {
+            currentImageIndex = index;
+            lightboxImg.src = paperItems[currentImageIndex].src;
+            lightbox.style.display = "flex";
+        };
+
+        gallery.appendChild(img);
+    });
+
+    window.closeLightbox = function () {
+        lightbox.style.display = "none";
     };
 
-    gallery.appendChild(img);
+    window.previousImage = function (event) {
+        event.stopPropagation();
+        currentImageIndex = (currentImageIndex - 1 + paperItems.length) % paperItems.length;
+        lightboxImg.src = paperItems[currentImageIndex].src;
+    };
+
+    window.nextImage = function (event) {
+        event.stopPropagation();
+        currentImageIndex = (currentImageIndex + 1) % paperItems.length;
+        lightboxImg.src = paperItems[currentImageIndex].src;
+    };
 });
-
-function openLightbox(index) {
-    currentImageIndex = index;
-    document.getElementById("lightbox-img").src = paperItems[index].src;
-    document.getElementById("lightbox").style.display = "flex";
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-function previousImage(event) {
-    event.stopPropagation();
-    currentImageIndex = (currentImageIndex - 1 + paperItems.length) % paperItems.length;
-    document.getElementById("lightbox-img").src = paperItems[currentImageIndex].src;
-}
-
-function nextImage(event) {
-    event.stopPropagation();
-    currentImageIndex = (currentImageIndex + 1) % paperItems.length;
-    document.getElementById("lightbox-img").src = paperItems[currentImageIndex].src;
-}
