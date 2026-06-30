@@ -237,26 +237,29 @@ hr {
 /* PAPER ARCHIVE */
 
 #paper-gallery {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
     align-items: start;
 }
 
 .paper-thumbnail {
+    display: block;
     width: 100%;
-    height: 280px;
-    object-fit: contain;
-    margin: 0 auto;
+    height: auto;
+
     background: white;
-    padding: 4px;
+    padding: 3px;
     border: 1px solid #ddd;
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
-    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+
     transition: transform .25s;
+    cursor: pointer;
 }
 
 .paper-thumbnail:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px);
 }
 
 /* LIGHTBOX */
