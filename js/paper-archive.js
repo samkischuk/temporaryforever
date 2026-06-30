@@ -1,5 +1,4 @@
 let currentImageIndex = 0;
-
 const gallery = document.getElementById("paper-gallery");
 
 let displayedItems = [...paperItems];
@@ -21,30 +20,40 @@ displayedItems.forEach((item, index) => {
     img.alt = item.title;
     img.className = "paper-thumbnail";
 
+    let flipped = false;
+
     if (item.hoverSrc) {
         img.addEventListener("mouseenter", function () {
-            img.src = item.hoverSrc;
+            if (!isMobile()) img.src = item.hoverSrc;
         });
 
         img.addEventListener("mouseleave", function () {
-            img.src = item.src;
+            if (!isMobile()) img.src = item.src;
         });
     }
 
     img.onclick = function () {
+        if (isMobile() && item.hoverSrc && !flipped) {
+            img.src = item.hoverSrc;
+            flipped = true;
+            return;
+        }
+
         img.src = item.src;
         openLightbox(index);
+        flipped = false;
     };
 
     gallery.appendChild(img);
 });
 
+function isMobile() {
+    return window.matchMedia("(max-width: 700px)").matches;
+}
+
 function openLightbox(index) {
     currentImageIndex = index;
-
-    document.getElementById("lightbox-img").src =
-        displayedItems[currentImageIndex].src;
-
+    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
     document.getElementById("lightbox").style.display = "flex";
 }
 
@@ -54,22 +63,12 @@ function closeLightbox() {
 
 function previousImage(event) {
     event.stopPropagation();
-
-    currentImageIndex =
-        (currentImageIndex - 1 + displayedItems.length) %
-        displayedItems.length;
-
-    document.getElementById("lightbox-img").src =
-        displayedItems[currentImageIndex].src;
+    currentImageIndex = (currentImageIndex - 1 + displayedItems.length) % displayedItems.length;
+    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
 }
 
 function nextImage(event) {
     event.stopPropagation();
-
-    currentImageIndex =
-        (currentImageIndex + 1) %
-        displayedItems.length;
-
-    document.getElementById("lightbox-img").src =
-        displayedItems[currentImageIndex].src;
+    currentImageIndex = (currentImageIndex + 1) % displayedItems.length;
+    document.getElementById("lightbox-img").src = displayedItems[currentImageIndex].src;
 }
