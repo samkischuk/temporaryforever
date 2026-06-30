@@ -418,3 +418,34 @@ hr {
         padding-right: 14px;
     }
 }
+/* ==========================
+   HOMEPAGE LINKS
+========================== */
+
+.home-actions {
+    ...
+}
+
+...
+
+.or {
+    margin: 18px 0;
+    color: #777;
+    font-style: italic;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.instagram-link {
+    color: #54918e;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .25s ease, border-color .25s ease;
+}
+
+.instagram-link:hover {
+    color: #3f726f;
+    border-bottom-color: #3f726f;
+}
