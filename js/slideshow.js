@@ -8,7 +8,7 @@ const slideshowImage = document.getElementById("slideshow-image");
 slideshowImage.src = "images/" + photos[0].file;
 slideshowImage.alt = photos[0].title;
 
-// Change photos every 2 seconds
+// Change photos every 3 seconds
 function showNextSlide() {
 
     slideIndex++;
