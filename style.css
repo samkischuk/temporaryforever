@@ -439,13 +439,14 @@ hr {
 ========================== */
 
 .instagram-link {
-    color: #54918e;
+    color: #222;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #d8d3c9;
     transition: color .25s ease, border-color .25s ease;
 }
 
 .instagram-link:hover {
-    color: #3f726f;
-    border-bottom-color: #3f726f;
+    color: #54918e;
+    border-bottom-color: #54918e;
 }
+
