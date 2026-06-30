@@ -530,7 +530,8 @@ hr {
     }
 
     .submenu-content a {
-        padding-left: 26px;
-        font-size: 0.95em;
-    }
+    padding: 8px 0 8px 18px;
+    font-size: 0.75rem;   /* adjust to taste: 0.7–0.8rem */
+    line-height: 1.3;
+}
 }
