@@ -13,23 +13,17 @@
 <div class="container">
 
     <nav>
-
         <a href="/">Home</a>
 
         <div class="dropdown">
-
             <a href="/archive/">Archive</a>
-
             <div class="dropdown-content">
                 <a href="/archive/">All Photographs</a>
             </div>
-
         </div>
 
         <a href="/about/">About</a>
-
         <a href="/contact/">Contact</a>
-
     </nav>
 
     <a href="/" class="logo-link">
@@ -39,57 +33,24 @@
     </a>
 
     <p class="tagline">
-        a growing archive of anonymous photographs, negatives, & ephemera rescued from thrift stores, estate sales, flea markets, forgotten boxes, &amp; anywhere else history was nearly discarded.
+        a growing archive of anonymous photographs, negatives, and ephemera rescued from thrift stores, estate sales, flea markets, forgotten boxes, &amp; anywhere else history was nearly discarded.
     </p>
 
     <hr>
 
     <div class="slideshow">
-
         <a href="/archive/">
-
             <img id="slideshow-image"
                  src="images/EasterChildren.jpg"
                  alt="Archive Photograph"
                  class="photo">
-
         </a>
-
     </div>
 
 </div>
 
-<script>
-
-const slideshowPhotos = [
-
-    { file: "EasterChildren.jpg" },
-    { file: "EasterChildren2.jpg" },
-    { file: "BaseballBoy.jpg" },
-    { file: "BaseballKids.jpg" }
-
-];
-
-let slideIndex = 0;
-
-function showNextSlide() {
-
-    slideIndex++;
-
-    if (slideIndex >= slideshowPhotos.length) {
-
-        slideIndex = 0;
-
-    }
-
-    document.getElementById("slideshow-image").src =
-        "images/" + slideshowPhotos[slideIndex].file;
-
-}
-
-setInterval(showNextSlide, 3000);
-
-</script>
+<script src="js/photos.js"></script>
+<script src="js/slideshow.js"></script>
 
 </body>
 
