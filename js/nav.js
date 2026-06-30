@@ -8,17 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/archive/">Archive</a>
 
             <div class="dropdown-content">
+
                 <div class="menu-label">Photographs</div>
 
                 <a href="/archive/">All Photographs</a>
-
-                <hr class="menu-divider">
-
                 <a href="/archive/people/">People</a>
                 <a href="/archive/places/">Places</a>
                 <a href="/archive/animals/">Animals</a>
                 <a href="/archive/interiors/">Interiors</a>
                 <a href="/archive/objects/">Objects</a>
+
             </div>
         </div>
 
