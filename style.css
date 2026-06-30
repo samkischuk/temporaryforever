@@ -1,45 +1,59 @@
 body {
-    background-color: #54918e;
-    margin: 0;
-    font-family: Georgia, serif;
+    background: #54918e;
     color: #222;
+    font-family: Georgia, serif;
+    margin: 0;
 }
 
 .container {
     max-width: 900px;
     margin: 80px auto;
-    background: white;
     padding: 60px;
-    box-shadow: 0 10px 40px rgba(0,0,0,.15);
+    background: #faf8f2;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
 }
 
 .logo {
     display: block;
-    width: 420px;
-    max-width: 90%;
+    width: 650px;
+    max-width: 100%;
     margin: 0 auto 40px;
 }
 
 .tagline {
     text-align: center;
-    font-size: 22px;
+    max-width: 700px;
+    margin: 0 auto;
     color: #666;
+    font-size: 22px;
     line-height: 1.8;
-    margin-bottom: 50px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 150px;
+    margin: 50px auto;
 }
 
 .photo {
-    display: block;
-    width: 650px;
+    width: 700px;
     max-width: 100%;
-    margin: auto;
-    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+    display: block;
+    margin: 0 auto 25px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    box-sizing: border-box;
 }
 
-.description {
-    max-width: 650px;
-    margin: 30px auto 0;
-    font-size: 18px;
+.caption {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #666;
     line-height: 1.8;
-    color: #444;
+    font-size: 16px;
 }
