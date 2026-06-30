@@ -22,13 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
         img.alt = item.title;
         img.className = "thumbnail paper-thumbnail";
 
-        img.addEventListener("click", function () {
+        img.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
             currentPaperIndex = index;
             lightboxImg.src = displayedPaperItems[currentPaperIndex].src;
             lightbox.style.display = "flex";
         });
 
         paperGallery.appendChild(img);
+    });
+
+    lightbox.addEventListener("click", function () {
+        lightbox.style.display = "none";
+    });
+
+    lightboxImg.addEventListener("click", function (event) {
+        event.stopPropagation();
     });
 
     window.closeLightbox = function () {
