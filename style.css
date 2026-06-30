@@ -71,20 +71,11 @@ nav a:hover {
     box-shadow: 0 12px 30px rgba(0,0,0,.12);
     z-index: 999;
     padding: 8px 0;
+    overflow: visible;
 }
 
-.menu-label {
-    text-align: center;
-    padding: 14px 20px 10px;
-    margin-bottom: 6px;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: none;
-    color: #7d9f9b;
-    border-bottom: 1px solid #d8d3c9;
-    cursor: default;
-    pointer-events: none;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a {
@@ -102,7 +93,37 @@ nav a:hover {
     color: #54918e;
 }
 
-.dropdown:hover .dropdown-content {
+/* SUBMENU */
+
+.submenu {
+    position: relative;
+}
+
+.submenu-title {
+    position: relative;
+}
+
+.submenu-title::after {
+    content: " →";
+    font-size: 0.8em;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 230px;
+    background: #faf8f1;
+    border: 1px solid #d8d2c6;
+    z-index: 9999;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+.submenu-content a {
     display: block;
 }
 
@@ -142,6 +163,25 @@ nav a:hover {
     font-size: 16px;
 }
 
+.archive-title,
+.archive-heading {
+    text-align: center;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+
+.archive-subtitle {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
 hr {
     width: 120px;
     border: none;
@@ -172,15 +212,6 @@ hr {
 
 /* ARCHIVE */
 
-.archive-heading {
-    text-align: center;
-    font-size: 26px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -201,6 +232,20 @@ hr {
 .thumbnail:hover {
     transform: scale(1.03);
     cursor: pointer;
+}
+
+/* PAPER ARCHIVE */
+
+#paper-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    align-items: start;
+}
+
+.paper-thumbnail {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 /* LIGHTBOX */
@@ -294,6 +339,31 @@ hr {
     font-style: italic;
 }
 
+/* CONTACT */
+
+.instagram-link {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #d8d3c9;
+    transition: color .25s ease, border-color .25s ease;
+}
+
+.instagram-link:hover {
+    color: #54918e;
+    border-bottom-color: #54918e;
+}
+
+/* ABOUT PAGE */
+
+.about-text {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2;
+    font-size: 17px;
+    color: #444;
+}
+
 /* MOBILE */
 
 @media (max-width: 700px) {
@@ -305,15 +375,11 @@ hr {
     }
 
     nav {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        align-items: center;
-        justify-items: center;
-        gap: 0;
         margin-bottom: 28px;
         padding-bottom: 18px;
-        border-bottom: 1px solid #d8d3c9;
         overflow: visible;
+        text-align: center;
     }
 
     nav a {
@@ -334,8 +400,11 @@ hr {
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
+        width: 85vw;
+        max-width: 360px;
         min-width: 175px;
         margin-top: 8px;
+        overflow: visible;
     }
 
     .dropdown-content a {
@@ -343,9 +412,29 @@ hr {
         padding: 12px 14px;
     }
 
-    .menu-label {
-        font-size: 10px;
-        letter-spacing: 3px;
+    .submenu-content {
+        position: static;
+        display: none;
+        border: none;
+        border-top: 1px solid #d8d2c6;
+        background: #f4f1e8;
+        min-width: 100%;
+        margin-top: 6px;
+        margin-bottom: 10px;
+    }
+
+    .submenu:hover .submenu-content {
+        display: block;
+    }
+
+    .submenu-title::after {
+        content: " ↓";
+    }
+
+    .submenu-content a {
+        padding: 8px 0 8px 18px;
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
     .logo {
@@ -383,8 +472,22 @@ hr {
         gap: 24px;
     }
 
+    #paper-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .paper-thumbnail {
+        height: 180px;
+    }
+
+    .archive-title,
     .archive-heading {
         font-size: 20px;
+    }
+
+    .archive-subtitle {
+        font-size: 15px;
     }
 
     .arrow {
@@ -417,134 +520,8 @@ hr {
         padding-left: 14px;
         padding-right: 14px;
     }
-}
-/* ==========================
-   HOMEPAGE LINKS
-========================== */
 
-.home-actions {
-    ...
-}
-
-...
-
-.or {
-    margin: 18px 0;
-    color: #777;
-    font-style: italic;
-}
-
-/* ==========================
-   CONTACT
-========================== */
-
-.instagram-link {
-    color: #222;
-    text-decoration: none;
-    border-bottom: 1px solid #d8d3c9;
-    transition: color .25s ease, border-color .25s ease;
-}
-
-.instagram-link:hover {
-    color: #54918e;
-    border-bottom-color: #54918e;
-}
-/* ==========================
-   ABOUT PAGE
-========================== */
-
-.about-text {
-    max-width: 650px;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 2;
-    font-size: 17px;
-    color: #444;
-}
-.submenu {
-    position: relative;
-}
-
-.submenu-title {
-    position: relative;
-}
-
-.submenu-title::after {
-    content: " →";
-    font-size: 0.8em;
-}
-
-.submenu-content {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    min-width: 230px;
-    background: #faf8f1;
-    border: 1px solid #d8d2c6;
-    z-index: 999;
-}
-
-.submenu:hover .submenu-content {
-    display: block;
-}
-
-.submenu-content a {
-    display: block;
-}
-@media (max-width: 700px) {
-    nav {
-        text-align: center;
+    #paper-gallery {
+        grid-template-columns: 1fr;
     }
-
-    .dropdown {
-        position: relative;
-    }
-
-    .dropdown-content {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85vw;
-        max-width: 360px;
-        overflow: visible;
-    }
-
-    .submenu-content {
-        position: static;
-        display: none;
-        border: none;
-        border-top: 1px solid #d8d2c6;
-        background: #f4f1e8;
-        min-width: 100%;
-        margin-top: 6px;
-        margin-bottom: 10px;
-    }
-
-    .submenu:hover .submenu-content {
-        display: block;
-    }
-
-    .submenu-title::after {
-        content: " ↓";
-    }
-
-    .submenu-content a {
-    padding: 8px 0 8px 18px;
-    font-size: 0.75rem;   /* adjust to taste: 0.7–0.8rem */
-    line-height: 1.3;
-}
-/* PAPER ARCHIVE SIZING */
-
-#paper-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    align-items: start;
-}
-
-#paper-gallery .thumbnail {
-    width: auto;
-    max-width: 100%;
-    max-height: 260px;
-    object-fit: contain;
-    margin: 0 auto;
 }
