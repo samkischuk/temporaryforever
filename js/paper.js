@@ -1,7 +1,7 @@
 const paperItems = [
     {
-        src: "/images/paper/BravermanIllustration.jpg",
+        src: "/images/paper/advertisements/BravermanIllustration.jpg",
         title: "Braverman Illustration",
-        category: "paper"
+        category: "advertisements"
     }
 ];
