@@ -12,37 +12,106 @@
 
 <div class="container">
 
-   <nav>
-    <a href="/">Home</a>
+    <nav>
 
-    <div class="dropdown">
-        <a href="/archive/">Archive</a>
-        <div class="dropdown-content">
-            <a href="/archive/">All Photographs</a>
+        <a href="/">Home</a>
+
+        <div class="dropdown">
+
+            <a href="/archive/">Archive</a>
+
+            <div class="dropdown-content">
+                <a href="/archive/">All Photographs</a>
+            </div>
+
         </div>
-    </div>
 
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-</nav>
+        <a href="/about/">About</a>
 
-<a href="/" class="logo-link">
-    <img src="images/TFLogo.png"
-         alt="Temporary Forever"
-         class="logo">
-</a>
+        <a href="/contact/">Contact</a>
+
+    </nav>
+
+    <a href="/" class="logo-link">
+        <img src="images/TFLogo.png"
+             alt="Temporary Forever"
+             class="logo">
+    </a>
 
     <p class="tagline">
-        a growing archive of anonymous photographs, negatives, and ephemera rescued from thrift stores, estate sales, flea markets, forgotten boxes, & anywhere else history was nearly discarded.
+        a growing archive of anonymous photographs, negatives, and ephemera rescued from thrift stores, estate sales, flea markets, forgotten boxes, &amp; anywhere else history was nearly discarded.
     </p>
 
     <hr>
 
-    <img src="images/EasterChildren.jpg"
-         alt="Vintage Easter Photograph"
-         class="photo">
+    <div class="slideshow">
+
+        <a href="/archive/">
+
+            <img id="slideshow-image"
+                 src="images/EasterChildren.jpg"
+                 alt="Archive Photograph"
+                 class="photo">
+
+        </a>
+
+        <p id="slideshow-caption">
+            easter children
+        </p>
+
+    </div>
 
 </div>
+
+<script>
+
+const slideshowPhotos = [
+
+    {
+        file: "EasterChildren.jpg",
+        title: "easter children"
+    },
+
+    {
+        file: "EasterChildren2.jpg",
+        title: "easter children ii"
+    },
+
+    {
+        file: "BaseballBoy.jpg",
+        title: "baseball boy"
+    },
+
+    {
+        file: "BaseballKids.jpg",
+        title: "baseball kids"
+    }
+
+];
+
+let slideIndex = 0;
+
+function showNextSlide() {
+
+    slideIndex++;
+
+    if (slideIndex >= slideshowPhotos.length) {
+
+        slideIndex = 0;
+
+    }
+
+    document.getElementById("slideshow-image").src =
+        "images/" + slideshowPhotos[slideIndex].file;
+
+    document.getElementById("slideshow-caption").textContent =
+        slideshowPhotos[slideIndex].title;
+
+}
+
+setInterval(showNextSlide, 3500);
+
+</script>
 
 </body>
 
