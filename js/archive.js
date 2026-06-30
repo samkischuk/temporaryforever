@@ -40,4 +40,15 @@ document.getElementById("lightbox").addEventListener("click", closeLightbox);
 
 document.getElementById("lightbox-img").addEventListener("click", function(event) {
     event.stopPropagation();
-});
+}); 
+
+const urlParams = new URLSearchParams(window.location.search);
+const selectedPhoto = urlParams.get("photo");
+
+if (selectedPhoto) {
+    const selectedIndex = photos.findIndex(photo => photo.file === selectedPhoto);
+
+    if (selectedIndex !== -1) {
+        openLightbox(selectedIndex);
+    }
+}
