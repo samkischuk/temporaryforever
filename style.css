@@ -493,10 +493,10 @@ hr {
         gap: 18px;
     }
 
-    .paper-thumbnail {
-        height: 180px;
-        padding: 4px;
-    }
+   .paper-thumbnail {
+    height: auto;
+    padding: 3px;
+}
 
     .archive-title,
     .archive-heading {
