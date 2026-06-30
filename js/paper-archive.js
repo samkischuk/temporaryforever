@@ -19,40 +19,33 @@ displayedPaperItems.forEach((item, index) => {
     img.alt = item.title;
     img.className = "thumbnail paper-thumbnail";
 
-    img.addEventListener("click", function () {
-        openLightbox(index);
-    });
+    img.onclick = function () {
+        currentPaperIndex = index;
+        document.getElementById("lightbox-img").src = displayedPaperItems[currentPaperIndex].src;
+        document.getElementById("lightbox").style.display = "flex";
+    };
 
     paperGallery.appendChild(img);
 });
 
-function openLightbox(index) {
-    currentPaperIndex = index;
-
-    document.getElementById("lightbox-img").src = displayedPaperItems[index].src;
-    document.getElementById("lightbox").style.display = "flex";
-}
-
-function closeLightbox() {
+window.closeLightbox = function () {
     document.getElementById("lightbox").style.display = "none";
-}
+};
 
-function previousImage(event) {
+window.previousImage = function (event) {
     event.stopPropagation();
 
     currentPaperIndex =
         (currentPaperIndex - 1 + displayedPaperItems.length) % displayedPaperItems.length;
 
-    document.getElementById("lightbox-img").src =
-        displayedPaperItems[currentPaperIndex].src;
-}
+    document.getElementById("lightbox-img").src = displayedPaperItems[currentPaperIndex].src;
+};
 
-function nextImage(event) {
+window.nextImage = function (event) {
     event.stopPropagation();
 
     currentPaperIndex =
         (currentPaperIndex + 1) % displayedPaperItems.length;
 
-    document.getElementById("lightbox-img").src =
-        displayedPaperItems[currentPaperIndex].src;
-}
+    document.getElementById("lightbox-img").src = displayedPaperItems[currentPaperIndex].src;
+};
