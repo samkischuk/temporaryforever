@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ==========================
-    // NAVIGATION
-    // ==========================
-
     const nav = document.querySelector("nav");
 
     if (nav) {
@@ -16,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="dropdown-content">
 
                     <div class="submenu">
-
                         <span class="submenu-title">photographs</span>
 
                         <div class="submenu-content">
@@ -27,11 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             <a href="/archive/interiors/">interiors</a>
                             <a href="/archive/objects/">objects</a>
                         </div>
-
                     </div>
 
                     <div class="submenu">
-
                         <span class="submenu-title">printed matter</span>
 
                         <div class="submenu-content">
@@ -40,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <a href="/archive/paper/advertisements/">advertisements</a>
                             <a href="/archive/paper/matchbooks/">matchbooks</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -51,10 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // ==========================
-    // BACK TO TOP
-    // ==========================
-
     const button = document.createElement("button");
     button.id = "back-to-top";
     button.textContent = "back to top";
@@ -62,22 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(button);
 
     window.addEventListener("scroll", function () {
-
         if (window.scrollY > 100) {
             button.style.display = "block";
         } else {
             button.style.display = "none";
         }
-
     });
 
     button.addEventListener("click", function () {
-
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-
     });
 
 });
