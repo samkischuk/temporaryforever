@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/">Home</a>
 
         <div class="dropdown">
-            <a href="/archive/" class="dropdown-title">Archive</a>
+            <a href="/archive/">Archive</a>
 
             <div class="dropdown-content">
 
@@ -39,24 +39,4 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
     `;
-
-    const archiveTitle = document.querySelector(".dropdown-title");
-    const dropdown = document.querySelector(".dropdown");
-    const submenuTitles = document.querySelectorAll(".submenu-title");
-
-    archiveTitle.addEventListener("click", function (e) {
-        if (window.innerWidth <= 700) {
-            e.preventDefault();
-            dropdown.classList.toggle("open");
-        }
-    });
-
-    submenuTitles.forEach(function (title) {
-        title.addEventListener("click", function (e) {
-            if (window.innerWidth <= 700) {
-                e.preventDefault();
-                title.parentElement.classList.toggle("open");
-            }
-        });
-    });
 });
