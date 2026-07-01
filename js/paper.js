@@ -24,6 +24,10 @@ displayedItems.forEach((item, index) => {
     img.alt = item.title;
     img.className = "paper-thumbnail";
 
+    if (item.category === "matchbooks") {
+        img.classList.add("matchbook-thumbnail");
+    }
+
     let flipped = false;
 
     if (item.hoverSrc) {
@@ -88,7 +92,8 @@ function previousImage(event) {
 function nextImage(event) {
     event.stopPropagation();
 
-    currentImageIndex = (currentImageIndex + 1) % displayedItems.length;
+    currentImageIndex =
+        (currentImageIndex + 1) % displayedItems.length;
 
     showingBack = false;
 
