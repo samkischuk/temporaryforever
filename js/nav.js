@@ -1,50 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Navigation
+    // ==========================
+    // NAVIGATION
+    // ==========================
+
     const nav = document.querySelector("nav");
 
-    nav.innerHTML = `
-        <a href="/">Home</a>
+    if (nav) {
+        nav.innerHTML = `
+            <a href="/">Home</a>
 
-        <div class="dropdown">
-            <a href="/archive/">Archive</a>
+            <div class="dropdown">
+                <a href="/archive/">Archive</a>
 
-            <div class="dropdown-content">
+                <div class="dropdown-content">
 
-                <div class="submenu">
-                    <a href="/archive/" class="submenu-title">photographs</a>
+                    <div class="submenu">
 
-                    <div class="submenu-content">
-                        <a href="/archive/">all photographs</a>
-                        <a href="/archive/people/">people</a>
-                        <a href="/archive/places/">places</a>
-                        <a href="/archive/animals/">animals</a>
-                        <a href="/archive/interiors/">interiors</a>
-                        <a href="/archive/objects/">objects</a>
+                        <span class="submenu-title">photographs</span>
+
+                        <div class="submenu-content">
+                            <a href="/archive/">all photographs</a>
+                            <a href="/archive/people/">people</a>
+                            <a href="/archive/places/">places</a>
+                            <a href="/archive/animals/">animals</a>
+                            <a href="/archive/interiors/">interiors</a>
+                            <a href="/archive/objects/">objects</a>
+                        </div>
+
                     </div>
-                </div>
 
-                <div class="submenu">
-                    <a href="/archive/paper/" class="submenu-title">printed matter</a>
+                    <div class="submenu">
 
-                    <div class="submenu-content">
-                        <a href="/archive/paper/">all printed matter</a>
-                        <a href="/archive/paper/postcards/">postcards</a>
-                        <a href="/archive/paper/advertisements/">advertisements</a>
-                        <a href="/archive/paper/matchbooks/">matchbooks</a>
+                        <span class="submenu-title">printed matter</span>
+
+                        <div class="submenu-content">
+                            <a href="/archive/paper/">all printed matter</a>
+                            <a href="/archive/paper/postcards/">postcards</a>
+                            <a href="/archive/paper/advertisements/">advertisements</a>
+                            <a href="/archive/paper/matchbooks/">matchbooks</a>
+                        </div>
+
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
 
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-    `;
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        `;
+    }
 
-    // ------------------------------------
-    // Back to Top Button
-    // ------------------------------------
+    // ==========================
+    // BACK TO TOP
+    // ==========================
 
     const button = document.createElement("button");
     button.id = "back-to-top";
@@ -52,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(button);
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", function () {
 
-        if (window.scrollY > 500) {
+        if (window.scrollY > 100) {
             button.style.display = "block";
         } else {
             button.style.display = "none";
@@ -62,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
 
         window.scrollTo({
             top: 0,
