@@ -31,26 +31,32 @@
 
 </div>
 
+<!-- LIGHTBOX -->
+
 <div id="lightbox">
 
     <button class="close-btn" onclick="closeLightbox()">×</button>
 
     <button class="arrow left" onclick="previousImage(event)">❮</button>
 
-    <div class="lightbox-image-wrap">
+    <div class="lightbox-content">
 
-        <img
-            id="lightbox-img"
-            src=""
-            alt="Expanded Paper Ephemera">
+        <div class="lightbox-image-wrap">
 
-        <div id="lightbox-flip-text"></div>
+            <img
+                id="lightbox-img"
+                src=""
+                alt="Expanded Paper Ephemera">
 
-        <button
-            id="transcription-toggle"
-            onclick="toggleTranscription(event)">
-            transcription ↓
-        </button>
+            <div id="lightbox-flip-text"></div>
+
+            <button
+                id="transcription-toggle"
+                onclick="toggleTranscription(event)">
+                transcription ↓
+            </button>
+
+        </div>
 
         <div id="transcription-box"></div>
 
