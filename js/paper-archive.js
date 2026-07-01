@@ -18,7 +18,7 @@ i was so glad to hear that you were doing so nicely, & the baby was well & fine.
 
 you must pardon delay in answering your postal, but i have been sick in bed myself. just able to help with the work today. could not get any help, so cass stayed home and, with claude's help, managed to get along.
 
-wishing you a happy new year and an ever [illegible]...
+wishing you a happy new year and never fear friend.
 `
 },
 
