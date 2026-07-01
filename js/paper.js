@@ -45,6 +45,7 @@ function buildGroupedPaperArchive() {
 
     groups.forEach(group => {
         const items = displayedItems.filter(item => item.category === group.category);
+
         if (items.length === 0) return;
 
         const section = document.createElement("section");
@@ -79,6 +80,10 @@ function createPaperImage(item, index) {
     img.alt = item.title;
     img.className = "paper-thumbnail";
 
+    if (item.category === "postcards") {
+        img.classList.add("postcard-thumbnail");
+    }
+
     if (item.category === "matchbooks") {
         img.classList.add("matchbook-thumbnail");
     }
@@ -87,11 +92,20 @@ function createPaperImage(item, index) {
 
     if (item.hoverSrc) {
         img.addEventListener("mouseenter", () => {
-            if (!isMobile()) img.src = item.hoverSrc;
+            if (!isMobile()) {
+                img.src = item.hoverSrc;
+
+                if (item.category === "postcards") {
+                    img.classList.add("postcard-back");
+                }
+            }
         });
 
         img.addEventListener("mouseleave", () => {
-            if (!isMobile()) img.src = item.src;
+            if (!isMobile()) {
+                img.src = item.src;
+                img.classList.remove("postcard-back");
+            }
         });
     }
 
@@ -99,10 +113,16 @@ function createPaperImage(item, index) {
         if (isMobile() && item.hoverSrc && !flipped) {
             img.src = item.hoverSrc;
             flipped = true;
+
+            if (item.category === "postcards") {
+                img.classList.add("postcard-back");
+            }
+
             return;
         }
 
         img.src = item.src;
+        img.classList.remove("postcard-back");
         flipped = false;
         openLightbox(index);
     });
@@ -119,8 +139,11 @@ function openLightbox(index) {
     showingBack = false;
 
     const item = displayedItems[currentImageIndex];
+    const lightboxImg = document.getElementById("lightbox-img");
 
-    document.getElementById("lightbox-img").src = item.src;
+    lightboxImg.src = item.src;
+    lightboxImg.classList.remove("postcard-back");
+
     document.getElementById("lightbox").style.display = "flex";
 
     updateFlipText();
@@ -138,8 +161,10 @@ function previousImage(event) {
 
     showingBack = false;
 
-    document.getElementById("lightbox-img").src =
-        displayedItems[currentImageIndex].src;
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.src = displayedItems[currentImageIndex].src;
+    lightboxImg.classList.remove("postcard-back");
 
     updateFlipText();
 }
@@ -152,8 +177,10 @@ function nextImage(event) {
 
     showingBack = false;
 
-    document.getElementById("lightbox-img").src =
-        displayedItems[currentImageIndex].src;
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.src = displayedItems[currentImageIndex].src;
+    lightboxImg.classList.remove("postcard-back");
 
     updateFlipText();
 }
@@ -167,14 +194,22 @@ function flipLightboxImage(event) {
 
     showingBack = !showingBack;
 
-    document.getElementById("lightbox-img").src =
-        showingBack ? item.hoverSrc : item.src;
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.src = showingBack ? item.hoverSrc : item.src;
+
+    if (item.category === "postcards" && showingBack) {
+        lightboxImg.classList.add("postcard-back");
+    } else {
+        lightboxImg.classList.remove("postcard-back");
+    }
 
     updateFlipText();
 }
 
 function updateFlipText() {
     const flipText = document.getElementById("lightbox-flip-text");
+
     if (!flipText) return;
 
     const item = displayedItems[currentImageIndex];
