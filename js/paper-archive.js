@@ -5,13 +5,13 @@ const paperItems = [
         category: "advertisements"
     },
 
-   {
-    src: "/images/paper/mtbakerfront.jpg",
-    hoverSrc: "/images/paper/mtbakerback.jpg",
-    title: "Mt. Baker Postcard",
-    category: "postcards",
+    {
+        src: "/images/paper/mtbakerfront.jpg",
+        hoverSrc: "/images/paper/mtbakerback.jpg",
+        title: "Mt. Baker Postcard",
+        category: "postcards",
 
-    transcription: `
+        transcription: `
 dear mrs. clock,
 
 i was so glad to hear that you were doing so nicely, & the baby was well & fine. how does genevieve like the little sister?
@@ -20,15 +20,17 @@ you must pardon delay in answering your postal, but i have been sick in bed myse
 
 wishing you a happy new year and never fear friend.
 `
-},
+    },
 
     {
         src: "/images/paper/majestichotelfront.jpg",
         hoverSrc: "/images/paper/majestichotelback.jpg",
         title: "Majestic Hotel Postcard",
         category: "postcards",
+
         transcription: `
-hotel majestic may 24th, 1914
+hotel majestic
+may 24th, 1914
 
 atlantic city was never like this.
 come over and join us.
@@ -41,17 +43,63 @@ j
 `
     },
 
+    // ==========================
+    // MATCHBOOKS
+    // ==========================
+
     {
         src: "/images/paper/chinesevillagefront.jpg",
         hoverSrc: "/images/paper/chinesevillageback.jpg",
-        title: "CV Inn Matchbook",
+        title: "Chinese Village Matchbook",
         category: "matchbooks"
     },
 
     {
         src: "/images/paper/ginossteakfront.jpg",
         hoverSrc: "/images/paper/ginossteakback.jpg",
-        title: "Gino's Matchbook",
+        title: "Gino's Steak House Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/goldengeesekaifront.jpg",
+        hoverSrc: "/images/paper/goldengeesekaiback.jpg",
+        title: "Golden Geese Kai Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/womanandmanfront.jpg",
+        hoverSrc: "/images/paper/womanandmanback.jpg",
+        title: "Woman & Man Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/thegringosfront.jpg",
+        hoverSrc: "/images/paper/thegringosback.jpg",
+        title: "The Gringos Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/djseattlefront.jpg",
+        hoverSrc: "/images/paper/djseattleback.jpg",
+        title: "DJ Seattle Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/playboyclubdetroitfront.jpg",
+        hoverSrc: "/images/paper/playboyclubdetroitback.jpg",
+        title: "Playboy Club Detroit Matchbook",
+        category: "matchbooks"
+    },
+
+    {
+        src: "/images/paper/playboyroommontanafront.jpg",
+        hoverSrc: "/images/paper/playboyroommontanaback.jpg",
+        title: "Playboy Room Montana Matchbook",
         category: "matchbooks"
     }
 ];
