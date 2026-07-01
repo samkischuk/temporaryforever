@@ -683,3 +683,59 @@ hr {
         height: 170px;
     }
 }
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .submenu {
+        position: relative;
+        width: 100%;
+    }
+
+    .submenu-title {
+        display: block;
+        width: 100%;
+    }
+
+    .submenu-content {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0;
+    }
+
+    .submenu:hover .submenu-content {
+        display: block;
+    }
+
+    .dropdown-content a,
+    .submenu-content a {
+        display: block;
+        padding: 8px 0;
+        text-align: center;
+    }
+}
