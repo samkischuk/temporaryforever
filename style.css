@@ -322,7 +322,7 @@ hr {
 
 #lightbox-img {
     max-width: 92vw;
-    max-height: 92vh;
+    max-height: 80vh;
     background: white;
     padding: 4px;
     border: 1px solid #ddd;
@@ -345,6 +345,43 @@ hr {
 
 #lightbox-flip-text:hover {
     opacity: 1;
+}
+
+/* TRANSCRIPTION */
+
+#transcription-toggle {
+    display: none;
+    margin-top: 14px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+#transcription-toggle:hover {
+    opacity: 1;
+}
+
+#transcription-box {
+    display: none;
+    max-width: 560px;
+    margin-top: 18px;
+    padding: 22px;
+    background: #f8f6f0;
+    color: #222;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+    text-transform: lowercase;
+    white-space: pre-line;
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    box-sizing: border-box;
 }
 
 .close-btn {
@@ -543,8 +580,6 @@ hr {
         gap: 24px;
     }
 
-    /* Paper Archive */
-
     #paper-gallery,
     .paper-group-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -559,8 +594,6 @@ hr {
         height: 185px;
     }
 
-    /* Matchbooks */
-
     .paper-group-matchbooks,
     .matchbook-gallery {
         grid-template-columns: repeat(3, 1fr) !important;
@@ -570,6 +603,20 @@ hr {
     .paper-group-matchbooks .paper-thumbnail,
     .matchbook-gallery .paper-thumbnail {
         padding: 3px;
+    }
+
+    #lightbox-img {
+        max-width: 88vw;
+        max-height: 70vh;
+    }
+
+    #transcription-box {
+        width: 86vw;
+        max-width: 86vw;
+        max-height: 30vh;
+        overflow-y: auto;
+        font-size: 14px;
+        padding: 18px;
     }
 
     .archive-title,
