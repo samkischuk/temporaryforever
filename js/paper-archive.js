@@ -49,8 +49,8 @@ j
     },
 
     {
-        src: "/images/paper/ginosfront.jpg",
-        hoverSrc: "/images/paper/ginosback.jpg",
+        src: "/images/paper/ginossteakfront.jpg",
+        hoverSrc: "/images/paper/ginossteakback.jpg",
         title: "Gino's Matchbook",
         category: "matchbooks"
     }
