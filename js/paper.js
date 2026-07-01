@@ -45,7 +45,6 @@ function buildGroupedPaperArchive() {
 
     groups.forEach(group => {
         const items = displayedItems.filter(item => item.category === group.category);
-
         if (items.length === 0) return;
 
         const section = document.createElement("section");
@@ -92,15 +91,11 @@ function createPaperImage(item, index) {
 
     if (item.hoverSrc) {
         img.addEventListener("mouseenter", () => {
-            if (!isMobile()) {
-                img.src = item.hoverSrc;
-            }
+            if (!isMobile()) img.src = item.hoverSrc;
         });
 
         img.addEventListener("mouseleave", () => {
-            if (!isMobile()) {
-                img.src = item.src;
-            }
+            if (!isMobile()) img.src = item.src;
         });
     }
 
@@ -131,14 +126,15 @@ function openLightbox(index) {
     const lightboxImg = document.getElementById("lightbox-img");
 
     lightboxImg.src = item.src;
-
     document.getElementById("lightbox").style.display = "flex";
 
     updateFlipText();
+    updateTranscription();
 }
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+    closeTranscription();
 }
 
 function previousImage(event) {
@@ -153,6 +149,7 @@ function previousImage(event) {
         displayedItems[currentImageIndex].src;
 
     updateFlipText();
+    updateTranscription();
 }
 
 function nextImage(event) {
@@ -167,13 +164,13 @@ function nextImage(event) {
         displayedItems[currentImageIndex].src;
 
     updateFlipText();
+    updateTranscription();
 }
 
 function flipLightboxImage(event) {
     event.stopPropagation();
 
     const item = displayedItems[currentImageIndex];
-
     if (!item.hoverSrc) return;
 
     showingBack = !showingBack;
@@ -186,7 +183,6 @@ function flipLightboxImage(event) {
 
 function updateFlipText() {
     const flipText = document.getElementById("lightbox-flip-text");
-
     if (!flipText) return;
 
     const item = displayedItems[currentImageIndex];
@@ -199,6 +195,48 @@ function updateFlipText() {
     } else {
         flipText.style.display = "none";
     }
+}
+
+function updateTranscription() {
+    const item = displayedItems[currentImageIndex];
+    const button = document.getElementById("transcription-toggle");
+    const box = document.getElementById("transcription-box");
+
+    if (!button || !box) return;
+
+    closeTranscription();
+
+    if (item.transcription) {
+        button.style.display = "block";
+        box.textContent = item.transcription;
+    } else {
+        button.style.display = "none";
+        box.textContent = "";
+    }
+}
+
+function toggleTranscription(event) {
+    event.stopPropagation();
+
+    const button = document.getElementById("transcription-toggle");
+    const box = document.getElementById("transcription-box");
+
+    if (!button || !box) return;
+
+    const isOpen = box.style.display === "block";
+
+    box.style.display = isOpen ? "none" : "block";
+    button.textContent = isOpen ? "transcription ↓" : "transcription ↑";
+}
+
+function closeTranscription() {
+    const button = document.getElementById("transcription-toggle");
+    const box = document.getElementById("transcription-box");
+
+    if (!button || !box) return;
+
+    box.style.display = "none";
+    button.textContent = "transcription ↓";
 }
 
 document
