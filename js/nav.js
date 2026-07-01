@@ -43,6 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
+    const dropdown = document.querySelector(".dropdown");
+    const archiveLink = document.querySelector(".dropdown > a");
+    const submenuTitles = document.querySelectorAll(".submenu-title");
+
+    if (archiveLink && dropdown) {
+        archiveLink.addEventListener("click", function (e) {
+            if (window.innerWidth <= 700) {
+                e.preventDefault();
+                dropdown.classList.toggle("mobile-open");
+            }
+        });
+    }
+
+    submenuTitles.forEach(function (title) {
+        title.addEventListener("click", function () {
+            if (window.innerWidth <= 700) {
+                title.parentElement.classList.toggle("mobile-open");
+            }
+        });
+    });
+
     const button = document.createElement("button");
     button.id = "back-to-top";
     button.textContent = "back to top";
