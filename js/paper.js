@@ -2,15 +2,19 @@ let currentImageIndex = 0;
 let showingBack = false;
 
 const gallery = document.getElementById("paper-gallery");
-let displayedItems = [...paperItems];
-
 const path = window.location.pathname.toLowerCase();
 
-if (path.includes("advertisements")) {
-    displayedItems = paperItems.filter(item => item.category === "advertisements");
-} else if (path.includes("postcards")) {
+let displayedItems = [...paperItems];
+
+const isPostcardsPage = path.includes("postcards");
+const isAdvertisementsPage = path.includes("advertisements");
+const isMatchbooksPage = path.includes("matchbooks");
+
+if (isPostcardsPage) {
     displayedItems = paperItems.filter(item => item.category === "postcards");
-} else if (path.includes("matchbooks")) {
+} else if (isAdvertisementsPage) {
+    displayedItems = paperItems.filter(item => item.category === "advertisements");
+} else if (isMatchbooksPage) {
     displayedItems = paperItems.filter(item => item.category === "matchbooks");
 }
 
@@ -18,9 +22,9 @@ displayedItems.reverse();
 
 const isAllPaperPage =
     path.includes("/archive/paper/") &&
-    !path.includes("postcards") &&
-    !path.includes("advertisements") &&
-    !path.includes("matchbooks");
+    !isPostcardsPage &&
+    !isAdvertisementsPage &&
+    !isMatchbooksPage;
 
 if (isAllPaperPage) {
     buildGroupedPaperArchive();
@@ -41,7 +45,6 @@ function buildGroupedPaperArchive() {
 
     groups.forEach(group => {
         const items = displayedItems.filter(item => item.category === group.category);
-
         if (items.length === 0) return;
 
         const section = document.createElement("section");
@@ -172,7 +175,6 @@ function flipLightboxImage(event) {
 
 function updateFlipText() {
     const flipText = document.getElementById("lightbox-flip-text");
-
     if (!flipText) return;
 
     const item = displayedItems[currentImageIndex];
