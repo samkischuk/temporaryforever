@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(button);
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 900) {
             button.style.display = "block";
         } else {
             button.style.display = "none";
