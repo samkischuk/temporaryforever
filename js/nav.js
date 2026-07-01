@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="dropdown-content">
 
                     <div class="submenu">
-                        <a href="#" class="submenu-title">photographs</a>
+                        <span class="submenu-title">photographs</span>
 
                         <div class="submenu-content">
                             <a href="/archive/">all photographs</a>
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <div class="submenu">
-                        <a href="#" class="submenu-title">printed matter</a>
+                        <span class="submenu-title">printed matter</span>
 
                         <div class="submenu-content">
                             <a href="/archive/paper/">all printed matter</a>
@@ -41,18 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/about/">About</a>
             <a href="/contact/">Contact</a>
         `;
-
-        // Prevent submenu titles from navigating
-        document.querySelectorAll(".submenu-title").forEach(title => {
-            title.addEventListener("click", function (e) {
-                e.preventDefault();
-            });
-        });
     }
-
-    // ==========================
-    // BACK TO TOP BUTTON
-    // ==========================
 
     const button = document.createElement("button");
     button.id = "back-to-top";
