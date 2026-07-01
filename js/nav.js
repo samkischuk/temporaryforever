@@ -43,10 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // ==========================
-    // MOBILE DROPDOWNS
-    // ==========================
-
     const dropdown = document.querySelector(".dropdown");
     const archiveLink = document.querySelector(".dropdown > a");
     const submenuTitles = document.querySelectorAll(".submenu-title");
@@ -56,6 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (window.innerWidth <= 700) {
                 e.preventDefault();
                 dropdown.classList.toggle("mobile-open");
+
+                if (!dropdown.classList.contains("mobile-open")) {
+                    document.querySelectorAll(".submenu").forEach(function (submenu) {
+                        submenu.classList.remove("mobile-open");
+                    });
+                }
             }
         });
     }
@@ -63,14 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
     submenuTitles.forEach(function (title) {
         title.addEventListener("click", function () {
             if (window.innerWidth <= 700) {
-                title.parentElement.classList.toggle("mobile-open");
+                const currentSubmenu = title.parentElement;
+                const isOpen = currentSubmenu.classList.contains("mobile-open");
+
+                document.querySelectorAll(".submenu").forEach(function (submenu) {
+                    submenu.classList.remove("mobile-open");
+                });
+
+                if (!isOpen) {
+                    currentSubmenu.classList.add("mobile-open");
+                }
             }
         });
     });
-
-    // ==========================
-    // BACK TO TOP BUTTON
-    // ==========================
 
     const button = document.createElement("button");
     button.id = "back-to-top";
