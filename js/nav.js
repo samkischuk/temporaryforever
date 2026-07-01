@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="/archive/paper/" class="submenu-title">printed matter</a>
 
                     <div class="submenu-content">
-                        <a href="/archive/paper/">all paper</a>
+                        <a href="/archive/paper/">all printed matter</a>
                         <a href="/archive/paper/postcards/">postcards</a>
                         <a href="/archive/paper/advertisements/">advertisements</a>
                         <a href="/archive/paper/matchbooks/">matchbooks</a>
