@@ -841,3 +841,18 @@ html {
     }
 
 }
+@media (max-width: 700px) {
+
+    .dropdown:hover .dropdown-content,
+    .submenu:hover .submenu-content {
+        display: none;
+    }
+
+    .dropdown.mobile-open > .dropdown-content {
+        display: block;
+    }
+
+    .submenu.mobile-open > .submenu-content {
+        display: block;
+    }
+}
