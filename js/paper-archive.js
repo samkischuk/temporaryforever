@@ -18,8 +18,7 @@ const paperItems = [
         title: "Majestic Hotel Postcard",
         category: "postcards",
         transcription: `
-hotel majestic
-may 24th, 1914
+hotel majestic may 24th, 1914
 
 atlantic city was never like this.
 come over and join us.
@@ -27,6 +26,8 @@ come over and join us.
 with love,
 
 luella
+ella
+j
 `
     },
 
