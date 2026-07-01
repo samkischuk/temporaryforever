@@ -62,20 +62,6 @@ j
     },
 
     {
-        src: "/images/paper/goldengeesekaifront.jpg",
-        hoverSrc: "/images/paper/goldengeesekaiback.jpg",
-        title: "Golden Geese Kai Matchbook",
-        category: "matchbooks"
-    },
-
-    {
-        src: "/images/paper/womanandmanfront.jpg",
-        hoverSrc: "/images/paper/womanandmanback.jpg",
-        title: "Woman & Man Matchbook",
-        category: "matchbooks"
-    },
-
-    {
         src: "/images/paper/thegringosfront.jpg",
         hoverSrc: "/images/paper/thegringosback.jpg",
         title: "The Gringos Matchbook",
