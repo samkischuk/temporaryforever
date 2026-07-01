@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Navigation
     const nav = document.querySelector("nav");
 
     nav.innerHTML = `
@@ -39,4 +41,34 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
     `;
+
+    // ------------------------------------
+    // Back to Top Button
+    // ------------------------------------
+
+    const button = document.createElement("button");
+    button.id = "back-to-top";
+    button.textContent = "back to top";
+
+    document.body.appendChild(button);
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+
+    });
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
 });
