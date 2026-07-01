@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
+    // ==========================
+    // MOBILE DROPDOWNS
+    // ==========================
+
     const dropdown = document.querySelector(".dropdown");
     const archiveLink = document.querySelector(".dropdown > a");
     const submenuTitles = document.querySelectorAll(".submenu-title");
@@ -63,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // ==========================
+    // BACK TO TOP BUTTON
+    // ==========================
 
     const button = document.createElement("button");
     button.id = "back-to-top";
