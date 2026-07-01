@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>postcards | Temporary Forever</title>
+
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
 <div class="container">
+
     <nav></nav>
 
     <a href="/" class="logo-link">
-        <img src="/images/TFLogo.png" alt="Temporary Forever" class="logo">
+        <img src="/images/TFLogo.png"
+             alt="Temporary Forever"
+             class="logo">
     </a>
 
     <h2 class="archive-title">postcards</h2>
@@ -24,23 +28,46 @@
     </p>
 
     <div class="gallery" id="paper-gallery"></div>
+
 </div>
 
+<!-- LIGHTBOX -->
+
 <div id="lightbox">
+
     <button class="close-btn" onclick="closeLightbox()">×</button>
 
     <button class="arrow left" onclick="previousImage(event)">❮</button>
 
-    <div class="lightbox-image-wrap">
-        <img id="lightbox-img" src="" alt="Expanded Postcard">
-        <div id="lightbox-flip-text"></div>
+    <div class="lightbox-content">
+
+        <div class="lightbox-image-wrap">
+
+            <img
+                id="lightbox-img"
+                src=""
+                alt="Expanded Postcard">
+
+            <div id="lightbox-flip-text"></div>
+
+            <button
+                id="transcription-toggle"
+                onclick="toggleTranscription(event)">
+                transcription ↓
+            </button>
+
+        </div>
+
+        <div id="transcription-box"></div>
+
     </div>
 
     <button class="arrow right" onclick="nextImage(event)">❯</button>
+
 </div>
 
-<script src="/js/paper-archive.js"></script>
 <script src="/js/nav.js"></script>
+<script src="/js/paper-archive.js"></script>
 <script src="/js/paper.js"></script>
 
 </body>
