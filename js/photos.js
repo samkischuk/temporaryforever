@@ -1,6 +1,139 @@
 const photos = [
 
     {
+        file: "CuteCoupleWithHat.jpg",
+        title: "Cute Couple with Hat",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "TwoMenSmoke.jpg",
+        title: "Two Men Smoke",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "ManFishes.jpg",
+        title: "Man Fishes",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "RidingOutsideKid.jpg",
+        title: "Riding Outside Kid",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "BasketCarryKids.jpg",
+        title: "Basket Carry Kids",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "BoysBestFriend.jpg",
+        title: "Boy's Best Friend",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "PuppyInYard.jpg",
+        title: "Puppy in Yard",
+        medium: "photograph",
+        category: "animals"
+    },
+
+    {
+        file: "CarnivalPlane.jpg",
+        title: "Carnival Plane",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "BabyOveralls.jpg",
+        title: "Baby Overalls",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "InThePews.jpg",
+        title: "In the Pews",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "LinedUpChurch.jpg",
+        title: "Lined Up Church",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "BoysAndGirls.jpg",
+        title: "Boys and Girls",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "PrayerHands.jpg",
+        title: "Prayer Hands",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "FamilyFlick.jpg",
+        title: "Family Flick",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "HoldingBaby2.jpg",
+        title: "Holding Baby II",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "HoldingBaby.jpg",
+        title: "Holding Baby",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "Bassinet.jpg",
+        title: "Bassinet",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "AllSmilesBaby.jpg",
+        title: "All Smiles Baby",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
+        file: "RingForBaby.jpg",
+        title: "Ring for Baby",
+        medium: "photograph",
+        category: "people"
+    },
+
+    {
         file: "Curlers.jpg",
         title: "Curlers",
         medium: "photograph",
