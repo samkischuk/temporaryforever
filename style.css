@@ -101,6 +101,19 @@ nav a:hover {
     font-size: 0.8em;
 }
 
+.submenu-title {
+    display: block;
+    padding: 10px 30px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: none;
+    color: #222;
+    cursor: default;
+    user-select: none;
+}
+
 .submenu-content {
     left: 100%;
     top: 0;
@@ -581,6 +594,15 @@ hr {
         font-size: 0.8em;
     }
 
+    .submenu-title {
+        display: block;
+        padding: 9px 16px;
+        text-align: left;
+        font-size: 10px;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+    }
+
     .logo {
         width: 300px;
         max-width: 100%;
@@ -726,6 +748,12 @@ hr {
 
     .dropdown-content a,
     .submenu-content a {
+        padding-left: 13px;
+        padding-right: 13px;
+        font-size: 9px;
+    }
+
+    .submenu-title {
         padding-left: 13px;
         padding-right: 13px;
         font-size: 9px;
