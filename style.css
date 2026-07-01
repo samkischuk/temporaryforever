@@ -209,12 +209,11 @@ hr {
     text-align: center;
 }
 
-/* PHOTO ARCHIVE */
+/* PHOTO ARCHIVE - MASONRY */
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 30px;
+    column-count: 3;
+    column-gap: 30px;
 }
 
 .thumbnail {
@@ -227,6 +226,8 @@ hr {
     box-sizing: border-box;
     cursor: pointer;
     transition: transform .25s ease;
+    break-inside: avoid;
+    margin-bottom: 30px;
 }
 
 .thumbnail:hover {
@@ -555,8 +556,6 @@ hr {
         letter-spacing: 1.2px;
     }
 
-    /* MOBILE DROPDOWNS - KEEP NAV IN ONE ROW */
-
     .dropdown,
     .submenu {
         position: relative;
@@ -626,8 +625,12 @@ hr {
     }
 
     .gallery {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        column-count: 2;
+        column-gap: 18px;
+    }
+
+    .thumbnail {
+        margin-bottom: 18px;
     }
 
     #paper-gallery,
@@ -649,8 +652,6 @@ hr {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 10px !important;
     }
-
-    /* MOBILE LIGHTBOX FIX */
 
     #lightbox {
         padding: 55px 46px 35px;
@@ -736,6 +737,10 @@ hr {
     .container {
         padding-left: 14px;
         padding-right: 14px;
+    }
+
+    .gallery {
+        column-count: 1;
     }
 
     .dropdown-content {
@@ -841,6 +846,7 @@ html {
     }
 
 }
+
 @media (max-width: 700px) {
 
     .dropdown:hover .dropdown-content,
