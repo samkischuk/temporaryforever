@@ -247,10 +247,6 @@ hr {
     object-fit: contain;
 }
 
-.postcard-back {
-    transform: rotate(-2deg) translateY(-4px);
-}
-
 /* GROUPED ALL PAPER PAGE */
 
 .grouped-paper-gallery {
