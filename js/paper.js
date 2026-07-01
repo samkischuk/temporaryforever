@@ -94,17 +94,12 @@ function createPaperImage(item, index) {
         img.addEventListener("mouseenter", () => {
             if (!isMobile()) {
                 img.src = item.hoverSrc;
-
-                if (item.category === "postcards") {
-                    img.classList.add("postcard-back");
-                }
             }
         });
 
         img.addEventListener("mouseleave", () => {
             if (!isMobile()) {
                 img.src = item.src;
-                img.classList.remove("postcard-back");
             }
         });
     }
@@ -113,16 +108,10 @@ function createPaperImage(item, index) {
         if (isMobile() && item.hoverSrc && !flipped) {
             img.src = item.hoverSrc;
             flipped = true;
-
-            if (item.category === "postcards") {
-                img.classList.add("postcard-back");
-            }
-
             return;
         }
 
         img.src = item.src;
-        img.classList.remove("postcard-back");
         flipped = false;
         openLightbox(index);
     });
@@ -142,7 +131,6 @@ function openLightbox(index) {
     const lightboxImg = document.getElementById("lightbox-img");
 
     lightboxImg.src = item.src;
-    lightboxImg.classList.remove("postcard-back");
 
     document.getElementById("lightbox").style.display = "flex";
 
@@ -161,10 +149,8 @@ function previousImage(event) {
 
     showingBack = false;
 
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    lightboxImg.src = displayedItems[currentImageIndex].src;
-    lightboxImg.classList.remove("postcard-back");
+    document.getElementById("lightbox-img").src =
+        displayedItems[currentImageIndex].src;
 
     updateFlipText();
 }
@@ -177,10 +163,8 @@ function nextImage(event) {
 
     showingBack = false;
 
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    lightboxImg.src = displayedItems[currentImageIndex].src;
-    lightboxImg.classList.remove("postcard-back");
+    document.getElementById("lightbox-img").src =
+        displayedItems[currentImageIndex].src;
 
     updateFlipText();
 }
@@ -194,15 +178,8 @@ function flipLightboxImage(event) {
 
     showingBack = !showingBack;
 
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    lightboxImg.src = showingBack ? item.hoverSrc : item.src;
-
-    if (item.category === "postcards" && showingBack) {
-        lightboxImg.classList.add("postcard-back");
-    } else {
-        lightboxImg.classList.remove("postcard-back");
-    }
+    document.getElementById("lightbox-img").src =
+        showingBack ? item.hoverSrc : item.src;
 
     updateFlipText();
 }
