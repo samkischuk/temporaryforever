@@ -2,7 +2,6 @@ let currentImageIndex = 0;
 let showingBack = false;
 
 const gallery = document.getElementById("paper-gallery");
-
 let displayedItems = [...paperItems];
 
 const path = window.location.pathname.toLowerCase();
@@ -17,7 +16,60 @@ if (path.includes("advertisements")) {
 
 displayedItems.reverse();
 
-displayedItems.forEach((item, index) => {
+const isAllPaperPage =
+    path.includes("/archive/paper/") &&
+    !path.includes("postcards") &&
+    !path.includes("advertisements") &&
+    !path.includes("matchbooks");
+
+if (isAllPaperPage) {
+    buildGroupedPaperArchive();
+} else {
+    displayedItems.forEach((item, index) => {
+        gallery.appendChild(createPaperImage(item, index));
+    });
+}
+
+function buildGroupedPaperArchive() {
+    gallery.classList.add("grouped-paper-gallery");
+
+    const groups = [
+        { title: "postcards", category: "postcards" },
+        { title: "matchbooks", category: "matchbooks" },
+        { title: "advertisements", category: "advertisements" }
+    ];
+
+    groups.forEach(group => {
+        const items = displayedItems.filter(item => item.category === group.category);
+
+        if (items.length === 0) return;
+
+        const section = document.createElement("section");
+        section.className = "paper-group";
+
+        const heading = document.createElement("h3");
+        heading.className = "paper-group-title";
+        heading.textContent = group.title;
+
+        const grid = document.createElement("div");
+        grid.className = "paper-group-grid";
+
+        if (group.category === "matchbooks") {
+            grid.classList.add("paper-group-matchbooks");
+        }
+
+        items.forEach(item => {
+            const realIndex = displayedItems.indexOf(item);
+            grid.appendChild(createPaperImage(item, realIndex));
+        });
+
+        section.appendChild(heading);
+        section.appendChild(grid);
+        gallery.appendChild(section);
+    });
+}
+
+function createPaperImage(item, index) {
     const img = document.createElement("img");
 
     img.src = item.src;
@@ -52,8 +104,8 @@ displayedItems.forEach((item, index) => {
         openLightbox(index);
     });
 
-    gallery.appendChild(img);
-});
+    return img;
+}
 
 function isMobile() {
     return window.matchMedia("(max-width: 700px)").matches;
