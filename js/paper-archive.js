@@ -42,8 +42,8 @@ j
     },
 
     {
-        src: "/images/paper/cvinnfront.jpg",
-        hoverSrc: "/images/paper/cvinnback.jpg",
+        src: "/images/paper/chinesevillagefront.jpg",
+        hoverSrc: "/images/paper/chinesevillageback.jpg",
         title: "CV Inn Matchbook",
         category: "matchbooks"
     },
