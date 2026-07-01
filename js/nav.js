@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="dropdown-content">
 
                     <div class="submenu">
-                        <span class="submenu-title">photographs</span>
+                        <a href="#" class="submenu-title">photographs</a>
 
                         <div class="submenu-content">
                             <a href="/archive/">all photographs</a>
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <div class="submenu">
-                        <span class="submenu-title">printed matter</span>
+                        <a href="#" class="submenu-title">printed matter</a>
 
                         <div class="submenu-content">
                             <a href="/archive/paper/">all printed matter</a>
@@ -41,7 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/about/">About</a>
             <a href="/contact/">Contact</a>
         `;
+
+        // Prevent submenu titles from navigating
+        document.querySelectorAll(".submenu-title").forEach(title => {
+            title.addEventListener("click", function (e) {
+                e.preventDefault();
+            });
+        });
     }
+
+    // ==========================
+    // BACK TO TOP BUTTON
+    // ==========================
 
     const button = document.createElement("button");
     button.id = "back-to-top";
@@ -50,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(button);
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 500) {
             button.style.display = "block";
         } else {
             button.style.display = "none";
