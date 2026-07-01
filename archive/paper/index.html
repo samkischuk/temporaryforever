@@ -38,11 +38,22 @@
     <button class="arrow left" onclick="previousImage(event)">❮</button>
 
     <div class="lightbox-image-wrap">
-        <img id="lightbox-img"
-             src=""
-             alt="Expanded Paper Ephemera">
+
+        <img
+            id="lightbox-img"
+            src=""
+            alt="Expanded Paper Ephemera">
 
         <div id="lightbox-flip-text"></div>
+
+        <button
+            id="transcription-toggle"
+            onclick="toggleTranscription(event)">
+            transcription ↓
+        </button>
+
+        <div id="transcription-box"></div>
+
     </div>
 
     <button class="arrow right" onclick="nextImage(event)">❯</button>
