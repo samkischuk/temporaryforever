@@ -1,12 +1,13 @@
 // Homepage Slideshow
 
-let slideIndex = 0;
+// Start on a random image
+let slideIndex = Math.floor(Math.random() * photos.length);
 
 const slideshowImage = document.getElementById("slideshow-image");
 
-// Show the newest photo immediately
-slideshowImage.src = "images/" + photos[0].file;
-slideshowImage.alt = photos[0].title;
+// Show random photo immediately
+slideshowImage.src = "images/" + photos[slideIndex].file;
+slideshowImage.alt = photos[slideIndex].title;
 
 // Change photos every 3 seconds
 function showNextSlide() {
