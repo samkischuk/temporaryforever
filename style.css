@@ -623,9 +623,19 @@ hr {
         padding: 8px;
     }
 
+    /* centered single-column photo archive on mobile */
+    .gallery {
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .thumbnail {
-        width: calc((100% - 18px) / 2);
-        margin-bottom: 18px;
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
     }
 
     #paper-gallery,
@@ -734,8 +744,13 @@ hr {
         padding-right: 14px;
     }
 
+    .gallery {
+        max-width: 100%;
+    }
+
     .thumbnail {
         width: 100%;
+        max-width: 100%;
     }
 
     .dropdown-content {
