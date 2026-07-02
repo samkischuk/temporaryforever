@@ -209,15 +209,15 @@ hr {
     text-align: center;
 }
 
-/* PHOTO ARCHIVE - MASONRY */
+/* PHOTO ARCHIVE - REAL MASONRY READY */
 
 .gallery {
-    column-count: 3;
-    column-gap: 30px;
+    display: block;
+    position: relative;
 }
 
 .thumbnail {
-    width: 100%;
+    width: calc((100% - 60px) / 3);
     display: block;
     background: white;
     padding: 10px;
@@ -226,7 +226,6 @@ hr {
     box-sizing: border-box;
     cursor: pointer;
     transition: transform .25s ease;
-    break-inside: avoid;
     margin-bottom: 30px;
 }
 
@@ -624,12 +623,8 @@ hr {
         padding: 8px;
     }
 
-    .gallery {
-        column-count: 2;
-        column-gap: 18px;
-    }
-
     .thumbnail {
+        width: calc((100% - 18px) / 2);
         margin-bottom: 18px;
     }
 
@@ -739,8 +734,8 @@ hr {
         padding-right: 14px;
     }
 
-    .gallery {
-        column-count: 1;
+    .thumbnail {
+        width: 100%;
     }
 
     .dropdown-content {
