@@ -19,13 +19,14 @@
              alt="Temporary Forever"
              class="logo">
     </a>
+
     <h2 class="archive-title">animals</h2>
 
-<p class="archive-subtitle">
-    companions, wildlife, & every creature that found its way into the archive.
-</p>
+    <p class="archive-subtitle">
+        companions, wildlife, & every creature that found its way into the archive.
+    </p>
 
-    <div class="gallery" id="gallery"></div>
+    <div id="gallery" class="gallery"></div>
 
 </div>
 
@@ -47,10 +48,10 @@
 <script src="/js/photos.js"></script>
 
 <script>
-const animalPhotos = photos.filter(photo => photo.category === "animals");
+    const filteredPhotos = photos.filter(photo => photo.category === "animals");
 
-photos.length = 0;
-animalPhotos.forEach(photo => photos.push(photo));
+    photos.length = 0;
+    filteredPhotos.forEach(photo => photos.push(photo));
 </script>
 
 <script src="/js/archive.js"></script>
