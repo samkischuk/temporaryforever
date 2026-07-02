@@ -5,9 +5,13 @@ let slideIndex = Math.floor(Math.random() * photos.length);
 
 const slideshowImage = document.getElementById("slideshow-image");
 
+function showSlide() {
+    slideshowImage.src = "images/" + photos[slideIndex].file;
+    slideshowImage.alt = photos[slideIndex].file;
+}
+
 // Show random photo immediately
-slideshowImage.src = "images/" + photos[slideIndex].file;
-slideshowImage.alt = photos[slideIndex].title;
+showSlide();
 
 // Change photos every 3 seconds
 function showNextSlide() {
@@ -18,9 +22,7 @@ function showNextSlide() {
         slideIndex = 0;
     }
 
-    slideshowImage.src = "images/" + photos[slideIndex].file;
-    slideshowImage.alt = photos[slideIndex].title;
-
+    showSlide();
 }
 
 setInterval(showNextSlide, 3000);
