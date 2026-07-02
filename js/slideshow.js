@@ -1,28 +1,17 @@
 // Homepage Slideshow
 
-// Start on a random image
-let slideIndex = Math.floor(Math.random() * photos.length);
-
 const slideshowImage = document.getElementById("slideshow-image");
 
-function showSlide() {
-    slideshowImage.src = "images/" + photos[slideIndex].file;
-    slideshowImage.alt = photos[slideIndex].file;
+function showRandomSlide() {
+
+    const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+
+    slideshowImage.src = "images/" + randomPhoto.file;
+    slideshowImage.alt = randomPhoto.file;
 }
 
-// Show random photo immediately
-showSlide();
+// Show a random photo immediately
+showRandomSlide();
 
-// Change photos every 3 seconds
-function showNextSlide() {
-
-    slideIndex++;
-
-    if (slideIndex >= photos.length) {
-        slideIndex = 0;
-    }
-
-    showSlide();
-}
-
-setInterval(showNextSlide, 3000);
+// Show a different random photo every 3 seconds
+setInterval(showRandomSlide, 3000);
