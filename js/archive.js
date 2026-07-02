@@ -3,24 +3,21 @@ let currentImage = 0;
 const gallery = document.getElementById("gallery");
 
 photos.forEach((photo, index) => {
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-
     const img = document.createElement("img");
+
     img.src = "/images/" + photo.file;
     img.alt = photo.file;
     img.className = "thumbnail";
     img.onclick = () => openLightbox(index);
 
-    item.appendChild(img);
-    gallery.appendChild(item);
+    gallery.appendChild(img);
 });
 
 /* MASONRY LAYOUT */
 imagesLoaded(gallery, function () {
     new Masonry(gallery, {
-        itemSelector: ".gallery-item",
-        columnWidth: ".gallery-item",
+        itemSelector: ".thumbnail",
+        columnWidth: ".thumbnail",
         gutter: window.innerWidth <= 390 ? 12 : window.innerWidth <= 700 ? 16 : 30,
         percentPosition: true
     });
@@ -29,8 +26,12 @@ imagesLoaded(gallery, function () {
 function openLightbox(index) {
     currentImage = index;
 
-    document.getElementById("lightbox-img").src = "/images/" + photos[currentImage].file;
-    document.getElementById("lightbox-img").alt = photos[currentImage].file;
+    document.getElementById("lightbox-img").src =
+        "/images/" + photos[currentImage].file;
+
+    document.getElementById("lightbox-img").alt =
+        photos[currentImage].file;
+
     document.getElementById("lightbox").style.display = "flex";
 }
 
@@ -40,12 +41,14 @@ function closeLightbox() {
 
 function nextImage(event) {
     event.stopPropagation();
+
     currentImage = (currentImage + 1) % photos.length;
     openLightbox(currentImage);
 }
 
 function previousImage(event) {
     event.stopPropagation();
+
     currentImage = (currentImage - 1 + photos.length) % photos.length;
     openLightbox(currentImage);
 }
@@ -64,6 +67,7 @@ document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowLeft") previousImage(event);
 });
 
+/* Open selected photo from URL */
 const urlParams = new URLSearchParams(window.location.search);
 const selectedPhoto = urlParams.get("photo");
 
