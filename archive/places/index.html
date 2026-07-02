@@ -20,13 +20,13 @@
              class="logo">
     </a>
 
-<h2 class="archive-title">places</h2>
+    <h2 class="archive-title">places</h2>
 
-<p class="archive-subtitle">
-    buildings, landscapes, streets, & places remembered through photographs.
-</p>
+    <p class="archive-subtitle">
+        buildings, landscapes, streets, & places remembered through photographs.
+    </p>
 
-    <div class="gallery" id="gallery"></div>
+    <div id="gallery" class="gallery"></div>
 
 </div>
 
@@ -48,11 +48,14 @@
 <script src="/js/photos.js"></script>
 
 <script>
-const placePhotos = photos.filter(photo => photo.category === "places");
+    const placePhotos = photos.filter(photo => photo.category === "places");
 
-photos.length = 0;
-placePhotos.forEach(photo => photos.push(photo));
+    photos.length = 0;
+    placePhotos.forEach(photo => photos.push(photo));
 </script>
+
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script src="/js/archive.js"></script>
 
