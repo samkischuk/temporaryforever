@@ -1,4 +1,4 @@
-,
+
     {
         file: "ThreeBrothersOnCar.jpg",
         medium: "photograph",
