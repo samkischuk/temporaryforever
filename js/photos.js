@@ -141,7 +141,7 @@ const photos = [
     file: "SnowDayBoy.jpg",
     medium: "photograph",
     category: "people"
-}
+},
     {
         file: "CuteCoupleWithHat.jpg",
         medium: "photograph",
