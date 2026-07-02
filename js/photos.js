@@ -1,5 +1,160 @@
 const photos = [
 {
+    file: "BeachPicOfWoman.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "RollerskatingCouple.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "GroupWomenPic.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomenReadyForShow.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomenInDressingRoom.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "ThreeLadiesInCostume.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "ManByHisCar.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "FamilyPicOnPorch.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "MenAndBoyField.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "LadyByFireplace.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomenOutOnTown.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "CoupleSmilesOnTheBeach.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomanInWater.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "GuysByCarWithDog.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "FourManBand.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "PosingOnBuildingSide.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomanInGrass.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "CakeCutting.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomanPosing.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "GuyGoingDown.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "ClimbingTheLadder.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "FamilyDinnerWithGuys.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomenEating.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "WomenAtShower.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "MenInTheBand.jpg",
+    medium: "photograph",
+    category: "people"
+},
+
+{
+    file: "BrickByBrick.jpg",
+    medium: "photograph",
+    category: "people"
+},
+    {
     file: "ThreeBrothersOnCar.jpg",
     medium: "photograph",
     category: "people"
