@@ -114,12 +114,6 @@ const photos = [
 },
 
 {
-    file: "ThreeLadiesAtBarn.jpg",
-    medium: "photograph",
-    category: "people"
-},
-
-{
     file: "ViewFromRoadside.jpg",
     medium: "photograph",
     category: "places"
