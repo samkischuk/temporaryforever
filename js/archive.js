@@ -43,6 +43,22 @@ window.addEventListener("resize", function () {
     initMasonry();
 });
 
+function hideBackToTop() {
+    const backToTop = document.getElementById("back-to-top");
+
+    if (backToTop) {
+        backToTop.style.display = "none";
+    }
+}
+
+function showBackToTopIfNeeded() {
+    const backToTop = document.getElementById("back-to-top");
+
+    if (backToTop && window.scrollY > 300) {
+        backToTop.style.display = "block";
+    }
+}
+
 function openLightbox(index) {
     currentImage = index;
 
@@ -53,10 +69,14 @@ function openLightbox(index) {
         photos[currentImage].file;
 
     document.getElementById("lightbox").style.display = "flex";
+
+    hideBackToTop();
 }
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+
+    showBackToTopIfNeeded();
 }
 
 function nextImage(event) {
