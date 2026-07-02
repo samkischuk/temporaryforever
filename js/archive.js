@@ -1,5 +1,6 @@
 let currentImage = 0;
 let masonryInstance = null;
+let lastWindowWidth = window.innerWidth;
 
 const gallery = document.getElementById("gallery");
 
@@ -38,9 +39,14 @@ imagesLoaded(gallery, function () {
     initMasonry();
 });
 
-/* Recalculate masonry when screen size changes */
+/* Recalculate masonry only if screen width actually changes */
 window.addEventListener("resize", function () {
-    initMasonry();
+    const newWindowWidth = window.innerWidth;
+
+    if (newWindowWidth !== lastWindowWidth) {
+        lastWindowWidth = newWindowWidth;
+        initMasonry();
+    }
 });
 
 function hideBackToTop() {
