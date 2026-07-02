@@ -6,11 +6,21 @@ photos.forEach((photo, index) => {
     const img = document.createElement("img");
 
     img.src = "/images/" + photo.file;
-    img.alt = photo.title;
+    img.alt = photo.file;
     img.className = "thumbnail";
     img.onclick = () => openLightbox(index);
 
     gallery.appendChild(img);
+});
+
+/* MASONRY LAYOUT */
+imagesLoaded(gallery, function () {
+    new Masonry(gallery, {
+        itemSelector: ".thumbnail",
+        columnWidth: ".thumbnail",
+        gutter: 30,
+        percentPosition: true
+    });
 });
 
 function openLightbox(index) {
@@ -20,7 +30,7 @@ function openLightbox(index) {
         "/images/" + photos[currentImage].file;
 
     document.getElementById("lightbox-img").alt =
-        photos[currentImage].title;
+        photos[currentImage].file;
 
     document.getElementById("lightbox").style.display = "flex";
 }
