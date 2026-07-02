@@ -19,12 +19,14 @@
              alt="Temporary Forever"
              class="logo">
     </a>
-<h2 class="archive-title">people</h2>
 
-<p class="archive-subtitle">
-    portraits, families, strangers, celebrations, & everyday moments.
-</p>
-    <div class="gallery" id="gallery"></div>
+    <h2 class="archive-title">people</h2>
+
+    <p class="archive-subtitle">
+        portraits, families, strangers, celebrations, & everyday moments.
+    </p>
+
+    <div id="gallery" class="gallery"></div>
 
 </div>
 
@@ -46,11 +48,14 @@
 <script src="/js/photos.js"></script>
 
 <script>
-const originalPhotos = photos;
-const peoplePhotos = originalPhotos.filter(photo => photo.category === "people");
-photos.length = 0;
-peoplePhotos.forEach(photo => photos.push(photo));
+    const peoplePhotos = photos.filter(photo => photo.category === "people");
+
+    photos.length = 0;
+    peoplePhotos.forEach(photo => photos.push(photo));
 </script>
+
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script src="/js/archive.js"></script>
 
