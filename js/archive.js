@@ -1,4 +1,5 @@
 let currentImage = 0;
+let masonryInstance = null;
 
 const gallery = document.getElementById("gallery");
 
@@ -14,13 +15,32 @@ photos.forEach((photo, index) => {
 });
 
 /* MASONRY LAYOUT */
-imagesLoaded(gallery, function () {
-    new Masonry(gallery, {
+function getGutter() {
+    if (window.innerWidth <= 390) return 12;
+    if (window.innerWidth <= 700) return 18;
+    return 30;
+}
+
+function initMasonry() {
+    if (masonryInstance) {
+        masonryInstance.destroy();
+    }
+
+    masonryInstance = new Masonry(gallery, {
         itemSelector: ".thumbnail",
         columnWidth: ".thumbnail",
-        gutter: window.innerWidth <= 390 ? 12 : window.innerWidth <= 700 ? 16 : 30,
+        gutter: getGutter(),
         percentPosition: true
     });
+}
+
+imagesLoaded(gallery, function () {
+    initMasonry();
+});
+
+/* Recalculate masonry when screen size changes */
+window.addEventListener("resize", function () {
+    initMasonry();
 });
 
 function openLightbox(index) {
