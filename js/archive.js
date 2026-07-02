@@ -18,7 +18,7 @@ imagesLoaded(gallery, function () {
     new Masonry(gallery, {
         itemSelector: ".thumbnail",
         columnWidth: ".thumbnail",
-        gutter: 30,
+        gutter: window.innerWidth <= 390 ? 12 : window.innerWidth <= 700 ? 16 : 30,
         percentPosition: true
     });
 });
