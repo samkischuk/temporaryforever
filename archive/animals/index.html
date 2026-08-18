@@ -26,7 +26,7 @@
         companions, wildlife, & every creature that found its way into the archive.
     </p>
 
-    <div id="gallery" class="gallery"></div>
+    <div id="gallery" class="gallery" data-category="animals"></div>
 
 </div>
 
@@ -46,13 +46,6 @@
 
 <script src="/js/nav.js"></script>
 <script src="/js/photos.js"></script>
-
-<script>
-    const filteredPhotos = photos.filter(photo => photo.category === "animals");
-
-    photos.length = 0;
-    filteredPhotos.forEach(photo => photos.push(photo));
-</script>
 
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

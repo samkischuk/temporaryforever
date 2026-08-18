@@ -1,0 +1,396 @@
+{
+  "photos": [
+    {
+      "file": "/images/BeachPicOfWoman.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/RollerskatingCouple.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GroupWomenPic.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomenReadyForShow.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomenInDressingRoom.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ThreeLadiesInCostume.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ManByHisCar.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FamilyPicOnPorch.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/MenAndBoyField.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/LadyByFireplace.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomenOutOnTown.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/CoupleSmilesOnTheBeach.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomanInWater.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GuysByCarWithDog.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FourManBand.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PosingOnBuildingSide.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomanInGrass.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/CakeCutting.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomanPosing.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GuyGoingDown.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ClimbingTheLadder.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FamilyDinnerWithGuys.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomenEating.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/WomenAtShower.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/MenInTheBand.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BrickByBrick.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ThreeBrothersOnCar.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/CoupleOnTheShore.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/TwoGuysOnBeach.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/TwoGirlsOnTheBeach.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BarnPic.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/WomanAndKidInYard.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BoyAndCat.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BackyardHang.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/TransportationFade.jpg",
+      "category": "objects"
+    },
+    {
+      "file": "/images/ThreeKidsThreePuppies.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PuppyLove.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FourGirlsAtHouse.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GardenParty.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FourSiblingsInGarden.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Waterfalls.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/SiblingsOnTheFarm.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FunnyGirlSmile.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/SiblingGroupPic.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FiveSistersInField.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ViewFromRoadside.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/SnowySiblings.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/SnowyDrive.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/SnowDayBoy.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/CuteCoupleWithHat.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/TwoMenSmoke.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/ManFishes.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/RidingOutsideKid.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BasketCarryKids.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BoysBestFriend.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PuppyInYard.jpg",
+      "category": "animals"
+    },
+    {
+      "file": "/images/CarnivalPlane.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BabyOveralls.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/InThePews.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/LinedUpChurch.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BoysAndGirls.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PrayerHands.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FamilyFlick.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/HoldingBaby2.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/HoldingBaby.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Bassinet.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/AllSmilesBaby.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/RingForBaby.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Curlers.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Wavy.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/OnTheRocks.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Garage.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/SmilingLadies.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/FamilyTies.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Tiger.jpg",
+      "category": "animals"
+    },
+    {
+      "file": "/images/PolarBear.jpg",
+      "category": "animals"
+    },
+    {
+      "file": "/images/RaccoonHat.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/AxeMan.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/LivingRoom.jpg",
+      "category": "interiors"
+    },
+    {
+      "file": "/images/Clown2.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/Clown.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/StainedGlass.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/HornSection.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/InTheBand.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/DeskSpace.jpg",
+      "category": "interiors"
+    },
+    {
+      "file": "/images/OfficeSpace.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GirlInDress.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/GlowInTheDark.jpg",
+      "category": "objects"
+    },
+    {
+      "file": "/images/RockFace.jpg",
+      "category": "places"
+    },
+    {
+      "file": "/images/ManWithCamera.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PipeMan2.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/PipeMan.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/YachtClubFamily.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/HolidayDinner.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BaseballKids.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/BaseballBoy.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/EasterChildren2.jpg",
+      "category": "people"
+    },
+    {
+      "file": "/images/EasterChildren.jpg",
+      "category": "people"
+    }
+  ]
+}

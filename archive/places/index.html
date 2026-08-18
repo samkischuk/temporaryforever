@@ -26,7 +26,7 @@
         buildings, landscapes, streets, & places remembered through photographs.
     </p>
 
-    <div id="gallery" class="gallery"></div>
+    <div id="gallery" class="gallery" data-category="places"></div>
 
 </div>
 
@@ -46,13 +46,6 @@
 
 <script src="/js/nav.js"></script>
 <script src="/js/photos.js"></script>
-
-<script>
-    const placePhotos = photos.filter(photo => photo.category === "places");
-
-    photos.length = 0;
-    placePhotos.forEach(photo => photos.push(photo));
-</script>
 
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

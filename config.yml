@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: samkischuk/temporaryforever
+  branch: main
+
+site_url: https://temporary4ever.com
+display_url: https://temporary4ever.com
+logo_url: https://temporary4ever.com/images/TFLogo.png
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - label: Photo Archive
+    name: photo_archive
+    format: json
+    editor:
+      preview: false
+    files:
+      - label: Photographs
+        name: photographs
+        file: data/photos.json
+        fields:
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.file}} — {{fields.category}}"
+            minimize_collapsed: true
+            fields:
+              - label: Photograph
+                name: file
+                widget: image
+                choose_url: false
+                hint: Upload the photograph once, then choose where it belongs.
+              - label: Category
+                name: category
+                widget: select
+                options:
+                  - { label: People, value: people }
+                  - { label: Places, value: places }
+                  - { label: Animals, value: animals }
+                  - { label: Interiors, value: interiors }
+                  - { label: Objects, value: objects }
