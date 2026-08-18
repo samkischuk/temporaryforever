@@ -1,52 +1,3 @@
-
-
-temporaryforever-main.zip
-Zip Archive
-
-2431cab7-6f10-42d5-bb2a-5bf8df8c1331.png
-
-f57b027c-4b3f-4c8f-abe2-0ac6ea25444e.png
-
-6847c434-5dd5-4283-91a9-e100da0c1743.png
-
-The admin folder was flattened during upload: config.yml and index.html were placed at the repository root instead of under /admin/. That explains the 404.
-
-Before fixing it, please open temporary4ever.com and tell me what appears. I want to confirm whether that upload also replaced your homepage’s index.html.
-
-
-7ede9d0c-6755-4d63-ad79-bfec978acadf.png
-yeah it broke it...
-
-Your photos and archive are safe—we only need to restore the homepage file.
-
-Restore the homepage
-Download temporaryforever-homepage-repair.zip.
-
-Right-click it and choose Extract All.
-
-Inside, you’ll see one file named index.html.
-
-Return to the main page of your GitHub repository.
-
-Choose Add file → Upload files.
-
-Upload only that index.html file.
-
-Click Commit changes.
-
-That will replace the accidental CMS homepage with your real homepage again. Tell me when you’ve committed it, and then we’ll create the /admin/ folder properly without dragging folders.
-
-
-it wont let me download that new zip
-
-Download the homepage file directly here:
-
-index.html
-
-If clicking opens the file instead of downloading it, press Ctrl + S and save it as exactly index.html.
-
-Then upload that single file to the main/root page of your GitHub repository and commit the change.
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +35,23 @@ Then upload that single file to the main/root page of your GitHub repository and
         </a>
     </div>
 
-index.html
-HTML
+    <div class="home-actions">
+        <a href="/archive/" class="home-link">explore the photo archive →</a>
 
+        <div class="or">or</div>
 
+        <button class="home-link random-button" onclick="letPhotoChooseYou()">
+            let the photo choose you →
+        </button>
+    </div>
+
+</div>
+
+<script src="/js/nav.js"></script>
+<script src="/js/photos.js"></script>
+<script src="/js/slideshow.js"></script>
+<script src="/js/random.js"></script>
+
+</body>
+
+</html>
