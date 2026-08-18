@@ -2,6 +2,7 @@ backend:
   name: github
   repo: samkischuk/temporaryforever
   branch: main
+  site_domain: temporaryforever-cms.netlify.app
 
 site_url: https://temporary4ever.com
 display_url: https://temporary4ever.com
