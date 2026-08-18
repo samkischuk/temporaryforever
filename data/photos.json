@@ -1,6 +1,10 @@
 {
   "photos": [
     {
+      "file": "/images/img_9765.jpeg",
+      "category": "people"
+    },
+    {
       "category": "people",
       "file": "/images/img_9759.jpeg"
     },
