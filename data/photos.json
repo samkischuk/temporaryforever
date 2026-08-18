@@ -1,6 +1,34 @@
 {
   "photos": [
     {
+      "file": "/images/img_9748.jpeg",
+      "category": "places"
+    },
+    {
+      "category": "people",
+      "file": "/images/img_9747.jpeg"
+    },
+    {
+      "file": "/images/img_9746.jpeg",
+      "category": "places"
+    },
+    {
+      "file": "/images/img_9745.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9744.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9743.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9742.jpeg",
+      "category": "people"
+    },
+    {
       "file": "/images/img_9710.jpeg",
       "category": "people"
     },
