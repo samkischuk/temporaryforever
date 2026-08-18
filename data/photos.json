@@ -1,6 +1,42 @@
 {
   "photos": [
     {
+      "file": "/images/img_9723.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9722.jpeg",
+      "category": "interiors"
+    },
+    {
+      "file": "/images/img_9720.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9718.jpeg",
+      "category": "places"
+    },
+    {
+      "file": "/images/img_9717.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9725.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9716.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9715.jpeg",
+      "category": "people"
+    },
+    {
+      "file": "/images/img_9713.jpeg",
+      "category": "people"
+    },
+    {
       "file": "/images/img_9714.jpeg",
       "category": "people"
     },
