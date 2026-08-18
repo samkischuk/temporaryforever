@@ -1,6 +1,10 @@
 {
   "photos": [
     {
+      "file": "/images/img_9714.jpeg",
+      "category": "people"
+    },
+    {
       "file": "/images/img_9719.jpeg",
       "category": "people"
     },
@@ -41,11 +45,11 @@
       "category": "people"
     },
     {
-      "file": "/images/MenAndBoyField.jpg",
+      "file": "/images/LadyByFireplace.jpg",
       "category": "people"
     },
     {
-      "file": "/images/LadyByFireplace.jpg",
+      "file": "/images/MenAndBoyField.jpg",
       "category": "people"
     },
     {
